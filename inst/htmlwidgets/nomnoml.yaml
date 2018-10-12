@@ -1,0 +1,16 @@
+dependencies:
+  - name: dagre
+    version: 0.0.1
+    src: htmlwidgets/lib/dagre
+    script:
+      - dagre.min.js
+  - name: lodash
+    version: 3.7.0
+    src: htmlwidgets/lib/lodash
+    script:
+      - lodash.js
+  - name: nomnoml
+    version: 0.2.0
+    src: htmlwidgets/lib/nomnoml
+    script:
+      - nomnoml.js

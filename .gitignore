@@ -1,0 +1,10 @@
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user
+.DS_Store
+sandbox
+README.html
+scratch
+inst/doc
