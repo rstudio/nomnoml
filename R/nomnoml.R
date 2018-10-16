@@ -57,12 +57,7 @@ renderNomnoml <- function(expr, env = parent.frame(), quoted = FALSE) {
 nomnoml_defaults <- function() {
   "
   #direction: right
-  #gutter: 5
-  #edgeMargin: 10
   #fill: #FEFEFF
-  #edgeMargin: 4
-  #leading: 1.5
   #lineWidth: 1
-  #spacing: 15
   "
 }
