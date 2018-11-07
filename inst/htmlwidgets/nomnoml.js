@@ -30,6 +30,7 @@ HTMLWidgets.widget({
         wrapper = document.createElementNS("http://www.w3.org/2000/svg", "svg");
         wrapper.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
         el.appendChild(wrapper);
+        if (x.className) el.classList.add(x.className);
         
         g = document.createElementNS("http://www.w3.org/2000/svg", "g");
         g.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");

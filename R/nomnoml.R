@@ -5,14 +5,21 @@
 #' @import htmlwidgets
 #'
 #' @export
-nomnoml <- function(code = "[Hello]-[World!]", width = NULL, height = NULL, elementId = NULL) {
+nomnoml <- function(
+  code = "[Hello]-[World!]",
+  width = NULL,
+  height = NULL,
+  id = NULL,
+  class = NULL,
+  ...) {
 
   # forward options using x
   x <- list(
     code = paste(
       nomnoml_defaults(),
       code
-    )
+    ),
+    className = class
   )
 
   # create widget
@@ -22,7 +29,7 @@ nomnoml <- function(code = "[Hello]-[World!]", width = NULL, height = NULL, elem
     width = width,
     height = height,
     package = 'nomnoml',
-    elementId = elementId
+    elementId = id
   )
 }
 
