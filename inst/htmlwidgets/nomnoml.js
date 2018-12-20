@@ -41,6 +41,7 @@ HTMLWidgets.widget({
       var transformY = -actualHeight / 2 * (1 - scale);
       
       transformY += height / 2 - actualHeight * scale / 2;
+      transformX += width / 2 - actualWidth * scale / 2;
 
       canvas.style = "transform:" +
         "translate(" + transformX + "px," + transformY + "px) " +

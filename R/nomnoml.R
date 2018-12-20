@@ -31,10 +31,7 @@ nomnoml <- function(
     width = width,
     height = height,
     package = 'nomnoml',
-    elementId = id,
-    sizingPolicy = htmlwidgets::sizingPolicy(
-      browser.fill = TRUE
-    )
+    elementId = id
   )
 }
 
@@ -71,5 +68,6 @@ nomnoml_defaults <- function() {
   #direction: right
   #fill: #FEFEFF
   #lineWidth: 1
+  #zoom: 2
   "
 }
