@@ -11,6 +11,7 @@ nomnoml <- function(
   height = NULL,
   id = NULL,
   class = NULL,
+  svg = FALSE,
   ...) {
 
   # forward options using x
@@ -19,7 +20,8 @@ nomnoml <- function(
       nomnoml_defaults(),
       code
     ),
-    className = class
+    className = class,
+    svg = svg
   )
 
   # create widget
@@ -29,7 +31,10 @@ nomnoml <- function(
     width = width,
     height = height,
     package = 'nomnoml',
-    elementId = id
+    elementId = id,
+    sizingPolicy = htmlwidgets::sizingPolicy(
+      browser.fill = TRUE
+    )
   )
 }
 
