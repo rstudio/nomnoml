@@ -12,6 +12,7 @@ nomnoml <- function(
   id = NULL,
   class = NULL,
   svg = FALSE,
+  png = NULL,
   ...) {
 
   # forward options using x
@@ -25,7 +26,7 @@ nomnoml <- function(
   )
 
   # create widget
-  htmlwidgets::createWidget(
+  widget <- htmlwidgets::createWidget(
     name = 'nomnoml',
     x,
     width = width,
@@ -33,6 +34,14 @@ nomnoml <- function(
     package = 'nomnoml',
     elementId = id
   )
+  
+  if (!is.null(png)) {
+    file <- tempfile(fileext = ".html")
+    htmlwidgets::saveWidget(widget, file)
+    webshot::webshot(file, png)
+  }
+  
+  widget
 }
 
 #' Shiny bindings for nomnoml
