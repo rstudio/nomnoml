@@ -11,7 +11,6 @@ nomnoml <- function(
   height = NULL,
   id = NULL,
   class = NULL,
-  svg = FALSE,
   png = NULL,
   ...) {
 
@@ -22,7 +21,7 @@ nomnoml <- function(
       code
     ),
     className = class,
-    svg = svg
+    svg = FALSE
   )
 
   # create widget
@@ -38,7 +37,8 @@ nomnoml <- function(
   if (!is.null(png)) {
     file <- tempfile(fileext = ".html")
     htmlwidgets::saveWidget(widget, file)
-    webshot::webshot(file, png)
+    
+    webshot::webshot(file, png, selector = "canvas")
   }
   
   widget
@@ -75,7 +75,7 @@ renderNomnoml <- function(expr, env = parent.frame(), quoted = FALSE) {
 nomnoml_defaults <- function() {
   "
   #fill: #FEFEFF
-  #lineWidth: 1
+  #lineWidth: 2
   #zoom: 4
   "
 }
