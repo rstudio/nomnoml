@@ -77,5 +77,6 @@ nomnoml_defaults <- function() {
   #fill: #FEFEFF
   #lineWidth: 2
   #zoom: 4
+  #direction: right
   "
 }
