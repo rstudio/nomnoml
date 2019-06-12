@@ -37,9 +37,12 @@ knit_nomnoml <- function (options) {
   
   widget_width <- options$width
   widget_height <- options$height
-    
-  fixed_image <- all(grepl("px$", c(options$width, options$height)))
+  fixed_image <- FALSE
   is_rstudio <- identical(.Platform$GUI, "RStudio")
+  
+  if (!is.null(widget_width) && !is.null(widget_width)) {
+    fixed_image <- all(grepl("px$", c(widget_width, widget_height)))
+  }
   
   if (fixed_image && !is_rstudio) {
     fixed_width <- as.numeric(gsub("px$", "", options$width))

@@ -7,10 +7,17 @@ diagrams based on syntax with customizable styling.
 
 ## Installation
 
-Install from GitHub using:
+Install from CRAN:
 
 ``` r
-devtools::install_github("javierluraschi/nomnoml")
+install.packages("nomonoml")
+```
+
+Or from GitHub using:
+
+``` r
+install.packages("remotes")
+remotes::install_github("javierluraschi/nomnoml")
 ```
 
 ## Getting Started
@@ -18,29 +25,42 @@ devtools::install_github("javierluraschi/nomnoml")
 You can create your first diagram by running:
 
 ``` r
-nomnoml::nomnoml("[Hello]-[World!]", height = 40)
+nomnoml::nomnoml("[Hello]-[World!]")
 ```
 
-![](tools/readme/simple-1.png)<!-- -->
+![](tools/readme/nomnoml-simple-1.png)<!-- -->
 
-You can also use `nomnoml` as knitr chunks:
+You can also use `nomnoml` in R Markdown:
 
-<pre><code>&#96``{r setup, include=FALSE}
+```` markdown
+---
+title: "A Diagram"
+output: html_document
+---
+
+```{r, setup, include=FALSE}
 library(nomnoml)
-&#96``</code></pre>
+```
 
-<pre><code>&#96``{nomnoml height=40}
+```{nomnoml}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
+
 [A]-[B]
-[B]-[C]
-&#96``</code></pre>
+[B]-[<box>C]
+```
+````
 
-![](tools/readme/multiline-1.png)<!-- -->
+![](tools/readme/nomnoml-multiline-2.png)<!-- -->
 
-### Example
+### Advanced
 
-This is how the Decorator pattern looks like in nomnoml syntax:
+Notice that much more complex diagrams can be designed using ‘nomnoml’
+by combining association types, classifier types, directives and custom
+classifier styles.
 
 ``` nomnoml
+#stroke: #a86128
 [<frame>Decorator pattern|
   [<abstract>Component||+ operation()]
   [Client] depends --> [Component]
@@ -51,7 +71,7 @@ This is how the Decorator pattern looks like in nomnoml syntax:
 ]
 ```
 
-![](tools/readme/decorator-2.png)<!-- -->
+![](tools/readme/nomnoml-decorator-3.png)<!-- -->
 
 ### Association types
 

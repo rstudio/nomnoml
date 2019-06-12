@@ -17,41 +17,66 @@ knitr::opts_chunk$set(fig.path = "tools/readme/", dev = "png")
 
 ## Installation
 
-Install from GitHub using:
+Install from CRAN:
 
 ```{r eval=FALSE}
-devtools::install_github("javierluraschi/nomnoml")
+install.packages("nomonoml")
+```
+
+Or from GitHub using:
+
+```{r eval=FALSE}
+install.packages("remotes")
+remotes::install_github("javierluraschi/nomnoml")
 ```
 
 ## Getting Started
 
 You can create your first diagram by running:
 
-```{r simple}
-nomnoml::nomnoml("[Hello]-[World!]", height = 40)
+```{r eval=FALSE}
+nomnoml::nomnoml("[Hello]-[World!]")
+```
+```{nomnoml nomnoml-simple, width=6, height=1, echo=FALSE}
+[Hello]-[World!]
 ```
 
-You can also use `nomnoml` as knitr chunks:
+You can also use `nomnoml` in R Markdown:
 
-<pre><code>&#96``{r setup, include=FALSE}
+````markdown
+---
+title: "A Diagram"
+output: html_document
+---
+
+`r ''````{r, setup, include=FALSE}
 library(nomnoml)
-&#96``</code></pre>
-
-<pre><code>&#96``{nomnoml height=40}
-[A]-[B]
-[B]-[C]
-&#96``</code></pre>
-
-```{nomnoml multiline, height=40, echo=FALSE}
-[A]-[B]
-[B]-[C]
 ```
 
-### Example
+`r ''````{nomnoml}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
 
-This is how the Decorator pattern looks like in nomnoml syntax:
+[A]-[B]
+[B]-[<box>C]
+```
+````
+```{nomnoml nomnoml-multiline, width=6, height=1, echo=FALSE}
+#stroke: orange
+#.highlight: fill=#8f8 dashed visual=ellipse
 
-```{nomnoml decorator, height=100}
+[A]-[B]
+[B]-[<highlight>C]
+```
+
+### Advanced
+
+Notice that much more complex diagrams can be designed using 'nomnoml' by
+combining association types, classifier types, directives and custom 
+classifier styles.
+
+```{nomnoml nomnoml-decorator}
+#stroke: #a86128
 [<frame>Decorator pattern|
   [<abstract>Component||+ operation()]
   [Client] depends --> [Component]

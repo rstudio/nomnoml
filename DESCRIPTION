@@ -1,16 +1,26 @@
 Package: nomnoml
 Type: Package
-Title: R Interface to 'nomnoml'
+Title: The Sassy 'UML' Diagram Renderer
 Version: 0.1.0
-Author: Javier Luraschi <javier@rstudio.com>
+Authors@R: c(
+    person("Javier", "Luraschi", email = "javier@rstudio.com", role = c("aut", "cre")),
+    person("Daniel", "Kallin", role = c("ctb"), comment = "nomnoml.js library, http://nomnoml.com")
+    )
 Maintainer: Javier Luraschi <javier@rstudio.com>
-Description: Provides an R interface to [nomnoml](http://www.nomnoml.com/),
-  a tool for drawing sassy 'UML' diagrams based on syntax with
-  customizable styling.
-License: MIT
+Description: Provides an R interface to 'nomnoml',
+  a tool for drawing sassy 'UML' diagrams based on a simple syntax with
+  customizable styling, see <http://www.nomnoml.com>.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends:
   R (>= 3.1.2)
 Imports:
   htmlwidgets
+RoxygenNote: 6.1.1
+Suggests: 
+    knitr,
+    png,
+    rmarkdown,
+    webshot
+VignetteBuilder: knitr
