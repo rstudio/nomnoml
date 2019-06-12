@@ -1,14 +1,15 @@
 Package: nomnoml
 Type: Package
-Title: The Sassy 'UML' Diagram Renderer
+Title: Sassy 'UML' Diagrams
 Version: 0.1.0
 Authors@R: c(
     person("Javier", "Luraschi", email = "javier@rstudio.com", role = c("aut", "cre")),
     person("Daniel", "Kallin", role = c("ctb"), comment = "nomnoml.js library, http://nomnoml.com")
     )
 Maintainer: Javier Luraschi <javier@rstudio.com>
-Description: A tool for drawing sassy 'UML' diagrams based on a simple syntax
-  with customizable styling, see <http://www.nomnoml.com>.
+Description: A tool for drawing sassy 'UML' diagrams based on a simple syntax,
+  see <http://www.nomnoml.com>. Supports styling, R Markdown and exporting diagrams 
+  in the PNG format.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -22,4 +23,3 @@ RoxygenNote: 6.1.1
 Suggests:
   knitr,
   rmarkdown
-VignetteBuilder: knitr
