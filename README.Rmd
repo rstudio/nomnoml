@@ -192,4 +192,4 @@ Available modifiers are
 
 ## Contributing
 
-Please reffer to [github.com/skanaar/nomnoml](https://github.com/skanaar/nomnoml).
+Please refer to [github.com/skanaar/nomnoml](https://github.com/skanaar/nomnoml).

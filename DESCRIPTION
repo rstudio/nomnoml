@@ -23,3 +23,5 @@ RoxygenNote: 6.1.1
 Suggests:
   knitr,
   rmarkdown
+URL: https://github.com/javierluraschi/nomnoml
+BugReports: https://github.com/javierluraschi/nomnoml/issues, https://github.com/skanaar/nomnoml/issues

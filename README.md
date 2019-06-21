@@ -178,5 +178,5 @@ Available modifiers are
 
 ## Contributing
 
-Please reffer to
+Please refer to
 [github.com/skanaar/nomnoml](https://github.com/skanaar/nomnoml).
