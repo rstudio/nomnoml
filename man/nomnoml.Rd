@@ -5,7 +5,7 @@
 \title{Render Diagram}
 \usage{
 nomnoml(code = "[Hello]-[World!]", png = NULL, width = NULL,
-  height = NULL, ...)
+  height = NULL, svg = FALSE, ...)
 }
 \arguments{
 \item{code}{The nomnoml diagram code.}
@@ -15,6 +15,9 @@ nomnoml(code = "[Hello]-[World!]", png = NULL, width = NULL,
 \item{width}{Optional width in pixels for the exported 'png'.}
 
 \item{height}{Optional height in pixels for the exported 'png'.}
+
+\item{svg}{Use 'svg' output instead of 'png'? Notice that rendering in
+'svg' is not at a par with 'png' and renders incorrectly at times.}
 
 \item{...}{Additional parameters.}
 }

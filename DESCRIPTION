@@ -1,7 +1,7 @@
 Package: nomnoml
 Type: Package
 Title: Sassy 'UML' Diagrams
-Version: 0.1.0.9000
+Version: 0.1.0.9001
 Authors@R: c(
     person("Javier", "Luraschi", email = "javier@rstudio.com", role = c("aut", "cre")),
     person("Daniel", "Kallin", role = c("ctb"), comment = "nomnoml.js library, http://nomnoml.com")
