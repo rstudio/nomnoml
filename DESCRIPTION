@@ -4,7 +4,8 @@ Title: Sassy 'UML' Diagrams
 Version: 0.1.0.9001
 Authors@R: c(
     person("Javier", "Luraschi", email = "javier@rstudio.com", role = c("aut", "cre")),
-    person("Daniel", "Kallin", role = c("ctb"), comment = "nomnoml.js library, http://nomnoml.com")
+    person("Andrie", "de Vries", email = "apdevries@gmail.com", role = "aut"),
+    person("Daniel", "Kallin", role = "aut", comment = "nomnoml.js library, http://nomnoml.com")
     )
 Maintainer: Javier Luraschi <javier@rstudio.com>
 Description: A tool for drawing sassy 'UML' diagrams based on a simple syntax,
@@ -21,7 +22,9 @@ Imports:
   webshot
 RoxygenNote: 6.1.1
 Suggests:
-  knitr,
-  rmarkdown
+    knitr,
+    rmarkdown,
+    testthat,
+    shinytest
 URL: https://github.com/javierluraschi/nomnoml
 BugReports: https://github.com/javierluraschi/nomnoml/issues, https://github.com/skanaar/nomnoml/issues

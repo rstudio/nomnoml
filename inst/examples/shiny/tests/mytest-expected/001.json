@@ -1,0 +1,40 @@
+{
+  "input": {
+    "textbox": "world"
+  },
+  "output": {
+    "diagram_canvas": {
+      "x": {
+        "code": "\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [hello]->[world]",
+        "svg": false
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    },
+    "diagram_svg": {
+      "x": {
+        "code": "\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [hello]->[world]",
+        "svg": true
+      },
+      "evals": [
+
+      ],
+      "jsHooks": [
+
+      ],
+      "deps": [
+
+      ]
+    }
+  },
+  "export": {
+
+  }
+}

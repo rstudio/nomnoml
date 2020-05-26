@@ -238,16 +238,17 @@ nomnoml <- function(
   height = NULL,
   svg = FALSE,
   ...) {
-
+  
   # forward options using x
   x <- list(
     code = paste(
       nomnoml_defaults(),
-      code
+      code,
+      sep = "\n"
     ),
     svg = svg
   )
-
+  
   # create widget
   widget <- htmlwidgets::createWidget(
     name = 'nomnoml',
@@ -298,9 +299,10 @@ renderNomnoml <- function(expr, env = parent.frame(), quoted = FALSE) {
 
 nomnoml_defaults <- function() {
   "
-  #fill: #FEFEFF
-  #lineWidth: 1
-  #zoom: 4
-  #direction: right
-  "
+#fill: #FEFEFF
+#lineWidth: 1
+#zoom: 4
+#direction: right
+
+"
 }

@@ -9,21 +9,15 @@ make_diagram <- function(name){
 ui <- fluidPage(
   titlePanel(title = "Using 'nomnoml' in shiny"),
   fluidRow(
-    box(
       textInput("textbox", label = "Enter name:", value = "world")
-    )
   ),
   fluidRow(
-    box(
       h2("Regular output"),
       nomnomlOutput(outputId = "diagram_canvas", height = "100px")
-    )
     ),
     fluidRow(
-      box(
         h2("SVG output"),
         nomnomlOutput(outputId = "diagram_svg", height = "100px")
-      )
   )
 )
 
