@@ -8,6 +8,8 @@ HTMLWidgets.widget({
     var canvas = null;
     var wrapper = null;
     var code = null;
+    var initialized_canvas = false;
+    var initialized_svg = false;
     
     var resizeSvg = function(width, height) {
       el.style.width = width;
@@ -28,6 +30,7 @@ HTMLWidgets.widget({
     };
     
     var resizeCanvas = function(width, height) {
+      
       nomnoml.draw(canvas, code);
       
       var actualWidth = canvas.getAttribute('width');
@@ -47,14 +50,19 @@ HTMLWidgets.widget({
         code = x.code;
         
         if (x.svg) {
-          wrapper = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-          wrapper.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-          el.appendChild(wrapper);
-          if (x.className) el.classList.add(x.className);
-          
-          g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-          g.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
-          wrapper.appendChild(g);
+          if (!initialized_svg) {
+            
+            wrapper = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            wrapper.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+            el.appendChild(wrapper);
+            if (x.className) el.classList.add(x.className);
+            
+            g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            g.setAttributeNS("http://www.w3.org/2000/xmlns/", "xmlns:xlink", "http://www.w3.org/1999/xlink");
+            wrapper.appendChild(g);
+            
+            initialized_svg = true;
+          }
           
           g.innerHTML = nomnoml.renderSvg(x.code);
           
@@ -62,9 +70,14 @@ HTMLWidgets.widget({
           resizeSvg(width, height);
         }
         else {
-          el.style.textAlign = "left";
-          canvas = document.createElement("canvas");
-          el.appendChild(canvas);
+          if (!initialized_canvas) {
+            
+            /* Create a new canvas only on first initalization */
+            el.style.textAlign = "left";
+            canvas = document.createElement("canvas");
+            el.appendChild(canvas);
+            initialized_canvas = true;
+          }
           
           resizeCanvas(width, height);
         }
