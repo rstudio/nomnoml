@@ -21,7 +21,9 @@ Imports:
   webshot
 RoxygenNote: 6.1.1
 Suggests:
-  knitr,
-  rmarkdown
+    knitr,
+    rmarkdown,
+    testthat,
+    shinytest
 URL: https://github.com/javierluraschi/nomnoml
 BugReports: https://github.com/javierluraschi/nomnoml/issues, https://github.com/skanaar/nomnoml/issues
