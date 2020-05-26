@@ -4,7 +4,7 @@ library(shinytest)
 # recordTest("inst/examples/shiny")
 
 test_that("shiny", {
-  skip()
+  skip("need to troubleshoot appveyor")
   
   # Use compareImages=FALSE because the expected image screenshots were created
   # on a Mac, and they will differ from screenshots taken on the CI platform,
