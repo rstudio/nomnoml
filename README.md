@@ -53,6 +53,34 @@ library(nomnoml)
 
 ![](tools/readme/nomnoml-multiline-2.png)<!-- -->
 
+### SVG
+
+To render using SVG, add `svg = TRUE`
+
+``` r
+diagram <- "
+[A]-[B]
+[B]-[<box>C]
+"
+
+nomnoml(diagram, svg = TRUE)
+```
+
+To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk
+options
+
+```` markdown
+```{nomnoml, svg=TRUE}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
+
+[A]-[B]
+[B]-[<box>C]
+```
+````
+
+![](tools/readme/nomnoml-svg-1.png)<!-- -->
+
 ### Advanced
 
 Notice that much more complex diagrams can be designed using ‘nomnoml’
@@ -71,7 +99,7 @@ classifier styles.
 ]
 ```
 
-![](tools/readme/nomnoml-decorator-3.png)<!-- -->
+![](tools/readme/nomnoml-decorator-2.png)<!-- -->
 
 ### Association types
 

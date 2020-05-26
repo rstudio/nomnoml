@@ -19,13 +19,13 @@ knitr::opts_chunk$set(fig.path = "tools/readme/", dev = "png")
 
 Install from CRAN:
 
-```{r eval=FALSE}
+```r
 install.packages("nomonoml")
 ```
 
 Or from GitHub using:
 
-```{r eval=FALSE}
+```r
 install.packages("remotes")
 remotes::install_github("javierluraschi/nomnoml")
 ```
@@ -61,6 +61,7 @@ library(nomnoml)
 [B]-[<box>C]
 ```
 ````
+
 ```{nomnoml nomnoml-multiline, width=6, height=1, echo=FALSE}
 #stroke: orange
 #.highlight: fill=#8f8 dashed visual=ellipse
@@ -68,6 +69,44 @@ library(nomnoml)
 [A]-[B]
 [B]-[<highlight>C]
 ```
+
+### SVG
+
+To render using SVG, add `svg = TRUE`
+
+
+```{r, eval=FALSE}
+diagram <- "
+[A]-[B]
+[B]-[<box>C]
+"
+
+nomnoml(diagram, svg = TRUE)
+```
+
+
+To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk options
+
+
+````markdown
+`r ''````{nomnoml, svg=TRUE}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
+
+[A]-[B]
+[B]-[<box>C]
+```
+````
+
+
+```{nomnoml nomnoml-svg, width=6, height=1, svg=TRUE, echo=FALSE}
+#stroke: orange
+#.highlight: fill=#8f8 dashed visual=ellipse
+
+[A]-[B]
+[B]-[<highlight>C]
+```
+
 
 ### Advanced
 
