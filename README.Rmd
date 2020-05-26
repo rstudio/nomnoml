@@ -61,6 +61,7 @@ library(nomnoml)
 [B]-[<box>C]
 ```
 ````
+
 ```{nomnoml nomnoml-multiline, width=6, height=1, echo=FALSE}
 #stroke: orange
 #.highlight: fill=#8f8 dashed visual=ellipse
