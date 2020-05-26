@@ -7,7 +7,7 @@ test_that("create diagrams", {
   diagram <- "[Hallo] -> [World]"
   expect_equal(
     nomnoml(diagram)$x$code,
-    paste(nomnoml_defaults(), diagram)
+    paste(nomnoml:::nomnoml_defaults(), diagram, sep = "\n")
   )
   
   png <- tempfile(fileext = ".png")

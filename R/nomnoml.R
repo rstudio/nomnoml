@@ -298,11 +298,10 @@ renderNomnoml <- function(expr, env = parent.frame(), quoted = FALSE) {
 }
 
 nomnoml_defaults <- function() {
-  "
+"
 #fill: #FEFEFF
 #lineWidth: 1
 #zoom: 4
 #direction: right
-
 "
 }
