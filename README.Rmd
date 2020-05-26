@@ -1,5 +1,4 @@
 ---
-title: "R Interface to 'nomnoml'"
 output:
   github_document:
     fig_width: 4
@@ -12,6 +11,8 @@ knitr::opts_chunk$set(eval = TRUE)
 knitr::opts_chunk$set(warning = FALSE)
 knitr::opts_chunk$set(fig.path = "tools/readme/", dev = "png")
 ```
+
+# nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
 
 **nomnoml** provides an R interface to [nomnoml](http://www.nomnoml.com/), a tool for drawing sassy UML diagrams based on syntax with customizable styling.
 
