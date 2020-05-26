@@ -19,8 +19,8 @@ knitr::opts_chunk$set(fig.path = "tools/readme/", dev = "png")
 
 Install from CRAN:
 
-```r
-install.packages("nomonoml")
+```{r eval=FALSE}
+install.packages("nomnoml")
 ```
 
 Or from GitHub using:
@@ -38,6 +38,13 @@ You can create your first diagram by running:
 nomnoml::nomnoml("[Hello]-[World!]")
 ```
 ```{nomnoml nomnoml-simple, width=6, height=1, echo=FALSE}
+[Hello]-[World!]
+```
+
+To make the diagram flow vertically, the default at [nomnoml.com](http://www.nomnoml.com/), add the [direction](https://github.com/javierluraschi/nomnoml/issues/5) directive:
+
+```{nomnoml nomnoml-vertical, width=6, height=1, echo=FALSE}
+#direction: down
 [Hello]-[World!]
 ```
 

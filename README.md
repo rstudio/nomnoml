@@ -10,7 +10,7 @@ diagrams based on syntax with customizable styling.
 Install from CRAN:
 
 ``` r
-install.packages("nomonoml")
+install.packages("nomnoml")
 ```
 
 Or from GitHub using:
