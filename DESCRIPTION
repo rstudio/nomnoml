@@ -28,4 +28,4 @@ Suggests:
     testthat,
     shinytest
 URL: https://github.com/javierluraschi/nomnoml
-BugReports: https://github.com/javierluraschi/nomnoml/issues, https://github.com/skanaar/nomnoml/issues
+BugReports: https://github.com/javierluraschi/nomnoml/issues
