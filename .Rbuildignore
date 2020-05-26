@@ -3,3 +3,5 @@
 ^docs$
 ^README.Rmd$
 ^scripts$
+^appveyor\.yml$
+^\.travis\.yml$
