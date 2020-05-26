@@ -30,6 +30,12 @@ nomnoml::nomnoml("[Hello]-[World!]")
 
 ![](tools/readme/nomnoml-simple-1.png)<!-- -->
 
+To make the diagram flow vertically, the default at
+[nomnoml.com](http://www.nomnoml.com/), add the
+[direction](https://github.com/rstudio/nomnoml/issues/5) directive:
+
+![](tools/readme/nomnoml-vertical-2.png)<!-- -->
+
 You can also use `nomnoml` in R Markdown:
 
 ```` markdown
@@ -51,7 +57,7 @@ library(nomnoml)
 ```
 ````
 
-![](tools/readme/nomnoml-multiline-2.png)<!-- -->
+![](tools/readme/nomnoml-multiline-3.png)<!-- -->
 
 ### SVG
 
