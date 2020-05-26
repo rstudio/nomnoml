@@ -9,12 +9,4 @@ test_that("create diagrams", {
     nomnoml(diagram)$x$code,
     paste(nomnoml:::nomnoml_defaults(), diagram, sep = "\n")
   )
-  
-  png <- tempfile(fileext = ".png")
-  expect_equal(file.size(png), NA_real_)
-  
-  
-  nomnoml(diagram, png = png)
-  expect_true(file.size(png) > 0)
-  
 })
