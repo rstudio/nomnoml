@@ -17,7 +17,7 @@ Or from GitHub using:
 
 ``` r
 install.packages("remotes")
-remotes::install_github("javierluraschi/nomnoml")
+remotes::install_github("rstudio/nomnoml")
 ```
 
 ## Getting Started

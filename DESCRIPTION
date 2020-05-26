@@ -5,7 +5,8 @@ Version: 0.1.0.9001
 Authors@R: c(
     person("Javier", "Luraschi", email = "javier@rstudio.com", role = c("aut", "cre")),
     person("Andrie", "de Vries", email = "apdevries@gmail.com", role = "aut"),
-    person("Daniel", "Kallin", role = "aut", comment = "nomnoml.js library, http://nomnoml.com")
+    person("Daniel", "Kallin", role = "aut", comment = "nomnoml.js library, http://nomnoml.com"),
+    person(family = "RStudio", role = "cph")
     )
 Maintainer: Javier Luraschi <javier@rstudio.com>
 Description: A tool for drawing sassy 'UML' diagrams based on a simple syntax,

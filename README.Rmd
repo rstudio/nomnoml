@@ -28,7 +28,7 @@ Or from GitHub using:
 
 ```r
 install.packages("remotes")
-remotes::install_github("javierluraschi/nomnoml")
+remotes::install_github("rstudio/nomnoml")
 ```
 
 ## Getting Started
@@ -42,7 +42,7 @@ nomnoml::nomnoml("[Hello]-[World!]")
 [Hello]-[World!]
 ```
 
-To make the diagram flow vertically, the default at [nomnoml.com](http://www.nomnoml.com/), add the [direction](https://github.com/javierluraschi/nomnoml/issues/5) directive:
+To make the diagram flow vertically, the default at [nomnoml.com](http://www.nomnoml.com/), add the [direction](https://github.com/rstudio/nomnoml/issues/5) directive:
 
 ```{nomnoml nomnoml-vertical, width=6, height=1, echo=FALSE}
 #direction: down
