@@ -20,7 +20,7 @@ knitr::opts_chunk$set(fig.path = "tools/readme/", dev = "png")
 Install from CRAN:
 
 ```{r eval=FALSE}
-install.packages("nomonoml")
+install.packages("nomnoml")
 ```
 
 Or from GitHub using:
