@@ -1,5 +1,5 @@
-R Interface to ‘nomnoml’
-================
+
+# nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
 
 **nomnoml** provides an R interface to
 [nomnoml](http://www.nomnoml.com/), a tool for drawing sassy UML
