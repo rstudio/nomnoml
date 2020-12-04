@@ -16,11 +16,11 @@
 #' The 'nomnoml' syntax is simple and intuitive, a "Hello World"
 #' example can be rendered as an 'htmlwidget' as follows:
 #' 
-#' \code{nomnoml::nomnoml("[Hello]-[World!]", "orange")}
+#' \code{nomnoml::nomnoml("[Hello]-[World!]")}
 #' 
 #' You can also render as a 'png' file with specific dimensions:
 #' 
-#' \code{nomnoml::nomnoml("[Hello]-[World!]", "hello.png", 600, 100)}
+#' \code{nomnoml::nomnoml("[Hello]-[World!]", png = "hello.png", 600, 100)}
 #' 
 #' Still, complex diagrams can be defined by combining multiple
 #' association types, classifier types, directives and
