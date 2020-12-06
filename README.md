@@ -1,5 +1,6 @@
 
-# nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
+nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
+=====================================================================
 
 [![Travis](https://travis-ci.org/rstudio/travis.svg?branch=master)](https://travis-ci.org/rstudio/nomnoml)
 [![AppVeyor build
@@ -11,28 +12,24 @@ status](https://ci.appveyor.com/api/projects/status/56dd82589vji7saw?svg=true)](
 [nomnoml](http://www.nomnoml.com/), a tool for drawing sassy UML
 diagrams based on syntax with customizable styling.
 
-## Installation
+Installation
+------------
 
 Install from CRAN:
 
-``` r
-install.packages("nomnoml")
-```
+    install.packages("nomnoml")
 
 Or from GitHub using:
 
-``` r
-install.packages("remotes")
-remotes::install_github("rstudio/nomnoml")
-```
+    install.packages("remotes")
+    remotes::install_github("rstudio/nomnoml")
 
-## Getting Started
+Getting Started
+---------------
 
 You can create your first diagram by running:
 
-``` r
-nomnoml::nomnoml("[Hello]-[World!]")
-```
+    nomnoml::nomnoml("[Hello]-[World!]")
 
 ![](tools/readme/nomnoml-simple-1.png)<!-- -->
 
@@ -40,28 +37,29 @@ To make the diagram flow vertically, the default at
 [nomnoml.com](http://www.nomnoml.com/), add the
 [direction](https://github.com/rstudio/nomnoml/issues/5) directive:
 
+    #direction: down
+    [Hello]-[World!]
+
 ![](tools/readme/nomnoml-vertical-2.png)<!-- -->
 
 You can also use `nomnoml` in R Markdown:
 
-```` markdown
----
-title: "A Diagram"
-output: html_document
----
+    ---
+    title: "A Diagram"
+    output: html_document
+    ---
 
-```{r, setup, include=FALSE}
-library(nomnoml)
-```
+    ```{r, setup, include=FALSE}
+    library(nomnoml)
+    ```
 
-```{nomnoml}
-#stroke: orange
-#.box: fill=#8f8 dashed visual=ellipse
+    ```{nomnoml}
+    #stroke: orange
+    #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
-```
-````
+    [A]-[B]
+    [B]-[<box>C]
+    ```
 
 ![](tools/readme/nomnoml-multiline-3.png)<!-- -->
 
@@ -69,27 +67,18 @@ library(nomnoml)
 
 To render using SVG, add `svg = TRUE`
 
-``` r
-diagram <- "
-[A]-[B]
-[B]-[<box>C]
-"
-
-nomnoml(diagram, svg = TRUE)
-```
+    nomnoml(diagram, svg = TRUE)
 
 To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk
 options
 
-```` markdown
-```{nomnoml, svg=TRUE}
-#stroke: orange
-#.box: fill=#8f8 dashed visual=ellipse
+    ```{nomnoml, svg=TRUE}
+    #stroke: orange
+    #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
-```
-````
+    [A]-[B]
+    [B]-[<box>C]
+    ```
 
 ![](tools/readme/nomnoml-svg-1.png)<!-- -->
 
@@ -99,17 +88,16 @@ Notice that much more complex diagrams can be designed using ‘nomnoml’
 by combining association types, classifier types, directives and custom
 classifier styles.
 
-``` nomnoml
-#stroke: #a86128
-[<frame>Decorator pattern|
-  [<abstract>Component||+ operation()]
-  [Client] depends --> [Component]
-  [Decorator|- next: Component]
-  [Decorator] decorates -- [ConcreteComponent]
-  [Component] <:- [Decorator]
-  [Component] <:- [ConcreteComponent]
-]
-```
+    #stroke: #a86128
+    #direction: down
+    [<frame>Decorator pattern|
+      [<abstract>Component||+ operation()]
+      [Client] depends --> [Component]
+      [Decorator|- next: Component]
+      [Decorator] decorates -- [ConcreteComponent]
+      [Component] <:- [Decorator]
+      [Component] <:- [ConcreteComponent]
+    ]
 
 ![](tools/readme/nomnoml-decorator-2.png)<!-- -->
 
@@ -216,7 +204,8 @@ Available modifiers are
     dashed
     empty
 
-## Contributing
+Contributing
+------------
 
 Please refer to
 [github.com/skanaar/nomnoml](https://github.com/skanaar/nomnoml).

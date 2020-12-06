@@ -39,13 +39,15 @@ You can create your first diagram by running:
 ```{r eval=FALSE}
 nomnoml::nomnoml("[Hello]-[World!]")
 ```
-```{nomnoml nomnoml-simple, width=6, height=1, echo=FALSE}
+
+
+```{nomnoml nomnoml-simple, width="250px", height="75px", echo=FALSE}
 [Hello]-[World!]
 ```
 
 To make the diagram flow vertically, the default at [nomnoml.com](http://www.nomnoml.com/), add the [direction](https://github.com/rstudio/nomnoml/issues/5) directive:
 
-```{nomnoml nomnoml-vertical, width=6, height=1, echo=FALSE}
+```{nomnoml nomnoml-vertical, width="200px", height="200px", echo=TRUE}
 #direction: down
 [Hello]-[World!]
 ```
@@ -71,7 +73,7 @@ library(nomnoml)
 ```
 ````
 
-```{nomnoml nomnoml-multiline, width=6, height=1, echo=FALSE}
+```{nomnoml nomnoml-multiline, width="300px", height="100px", echo=FALSE}
 #stroke: orange
 #.highlight: fill=#8f8 dashed visual=ellipse
 
@@ -85,11 +87,6 @@ To render using SVG, add `svg = TRUE`
 
 
 ```{r, eval=FALSE}
-diagram <- "
-[A]-[B]
-[B]-[<box>C]
-"
-
 nomnoml(diagram, svg = TRUE)
 ```
 
@@ -108,7 +105,7 @@ To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk options
 ````
 
 
-```{nomnoml nomnoml-svg, width=6, height=1, svg=TRUE, echo=FALSE}
+```{nomnoml nomnoml-svg, width="400px", height="100px", svg=TRUE, echo=FALSE}
 #stroke: orange
 #.highlight: fill=#8f8 dashed visual=ellipse
 
@@ -123,8 +120,9 @@ Notice that much more complex diagrams can be designed using 'nomnoml' by
 combining association types, classifier types, directives and custom 
 classifier styles.
 
-```{nomnoml nomnoml-decorator}
+```{nomnoml nomnoml-decorator, width="250px", height="250px"}
 #stroke: #a86128
+#direction: down
 [<frame>Decorator pattern|
   [<abstract>Component||+ operation()]
   [Client] depends --> [Component]

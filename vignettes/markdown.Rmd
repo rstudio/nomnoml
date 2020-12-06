@@ -1,0 +1,60 @@
+---
+title: "markdown"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{markdown}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(nomnoml)
+```
+
+
+```{nomnoml, svg=TRUE, width="2in", height="2in"}
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
+
+
+```{nomnoml, svg=TRUE}
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
+
+```{nomnoml, svg=FALSE, width="100px", height="100px"}
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
