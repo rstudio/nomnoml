@@ -2,11 +2,13 @@
 nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
 =====================================================================
 
-[![Travis](https://travis-ci.org/rstudio/travis.svg?branch=master)](https://travis-ci.org/rstudio/nomnoml)
-[![AppVeyor build
-status](https://ci.appveyor.com/api/projects/status/56dd82589vji7saw?svg=true)](https://ci.appveyor.com/project/rstudio/nomnoml)
+<!-- badges: start -->
+
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nomnoml)](https://cran.r-project.org/package=nomnoml)
 <a href="https://www.r-pkg.org/pkg/nomnoml"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a>
+[![R build
+status](https://github.com/javierluraschi/nomnoml/workflows/R-CMD-check/badge.svg)](https://github.com/javierluraschi/nomnoml/actions)
+<!-- badges: end -->
 
 **nomnoml** provides an R interface to
 [nomnoml](http://www.nomnoml.com/), a tool for drawing sassy UML
