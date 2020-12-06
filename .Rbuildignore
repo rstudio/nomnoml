@@ -5,3 +5,5 @@
 ^scripts$
 ^appveyor\.yml$
 ^\.travis\.yml$
+^_pkgdown\.yml$
+^pkgdown$
