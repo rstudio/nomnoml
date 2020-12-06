@@ -28,3 +28,4 @@ Suggests:
     shinytest
 URL: https://github.com/javierluraschi/nomnoml
 BugReports: https://github.com/javierluraschi/nomnoml/issues
+VignetteBuilder: knitr
