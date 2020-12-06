@@ -20,7 +20,7 @@ Imports:
   htmlwidgets,
   png,
   webshot
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Suggests:
     knitr,
     rmarkdown,
@@ -29,3 +29,4 @@ Suggests:
 URL: https://github.com/javierluraschi/nomnoml
 BugReports: https://github.com/javierluraschi/nomnoml/issues
 VignetteBuilder: knitr
+Roxygen: list(markdown = TRUE)

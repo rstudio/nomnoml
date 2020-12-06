@@ -2,10 +2,16 @@
 % Please edit documentation in R/nomnoml.R
 \name{nomnoml}
 \alias{nomnoml}
-\title{Render Diagram}
+\title{Render nomnoml diagram.}
 \usage{
-nomnoml(code = "[Hello]-[World!]", png = NULL, width = NULL,
-  height = NULL, svg = FALSE, ...)
+nomnoml(
+  code = "[Hello]-[World!]",
+  png = NULL,
+  width = NULL,
+  height = NULL,
+  svg = FALSE,
+  ...
+)
 }
 \arguments{
 \item{code}{The nomnoml diagram code.}
@@ -29,11 +35,11 @@ as a 'png' image.
 The 'nomnoml' syntax is simple and intuitive, a "Hello World"
 example can be rendered as an 'htmlwidget' as follows:
 
-\code{nomnoml::nomnoml("[Hello]-[World!]", "orange")}
+\code{nomnoml::nomnoml("[Hello]-[World!]")}
 
 You can also render as a 'png' file with specific dimensions:
 
-\code{nomnoml::nomnoml("[Hello]-[World!]", "hello.png", 600, 100)}
+\code{nomnoml::nomnoml("[Hello]-[World!]", png = "hello.png", 600, 100)}
 
 Still, complex diagrams can be defined by combining multiple
 association types, classifier types, directives and
@@ -45,117 +51,117 @@ to render inline diagrams in R Markdown documents.
 \section{Association Types}{
 
 
-\code{association -}
+\verb{association -}
 
-\code{association ->}
+\verb{association ->}
 
-\code{association <->}
+\verb{association <->}
 
-\code{dependency -->}
+\verb{dependency -->}
 
-\code{dependency <-->}
+\verb{dependency <-->}
 
-\code{generalization -:>}
+\verb{generalization -:>}
 
-\code{generalization <:-}
+\verb{generalization <:-}
 
-\code{implementation --:>}
+\verb{implementation --:>}
 
-\code{implementation <:--}
+\verb{implementation <:--}
 
-\code{composition +-}
+\verb{composition +-}
 
-\code{composition +->}
+\verb{composition +->}
 
-\code{aggregation o-}
+\verb{aggregation o-}
 
-\code{aggregation o->}
+\verb{aggregation o->}
 
-\code{note --}
+\verb{note --}
 
-\code{hidden -/-}
+\verb{hidden -/-}
 }
 
 \section{Classifier Types}{
 
 
-\code{[name]}
+\verb{[name]}
 
-\code{[<abstract> name]}
+\verb{[<abstract> name]}
 
-\code{[<instance> name]}
+\verb{[<instance> name]}
 
-\code{[<note> name]}
+\verb{[<note> name]}
 
-\code{[<reference> name]}
+\verb{[<reference> name]}
 
-\code{[<package> name]}
+\verb{[<package> name]}
 
-\code{[<frame> name]}
+\verb{[<frame> name]}
 
-\code{[<database> name]}
+\verb{[<database> name]}
 
-\code{[<start> name]}
+\verb{[<start> name]}
 
-\code{[<end> name]}
+\verb{[<end> name]}
 
-\code{[<state> name]}
+\verb{[<state> name]}
 
-\code{[<choice> name]}
+\verb{[<choice> name]}
 
-\code{[<input> name]}
+\verb{[<input> name]}
 
-\code{[<sender> name]}
+\verb{[<sender> name]}
 
-\code{[<receiver> name]}
+\verb{[<receiver> name]}
 
-\code{[<transceiver> name]}
+\verb{[<transceiver> name]}
 
-\code{[<actor> name]}
+\verb{[<actor> name]}
 
-\code{[<usecase> name]}
+\verb{[<usecase> name]}
 
-\code{[<label> name]}
+\verb{[<label> name]}
 
-\code{[<hidden> name]}
+\verb{[<hidden> name]}
 }
 
 \section{Directives}{
 
 
-\code{#arrowSize: 1}
+\verb{#arrowSize: 1}
 
-\code{#bendSize: 0.3}
+\verb{#bendSize: 0.3}
 
-\code{#direction: down | right}
+\verb{#direction: down | right}
 
-\code{#gutter: 5}
+\verb{#gutter: 5}
 
-\code{#edgeMargin: 0}
+\verb{#edgeMargin: 0}
 
-\code{#edges: hard | rounded}
+\verb{#edges: hard | rounded}
 
-\code{#fill: #eee8d5; #fdf6e3}
+\verb{#fill: #eee8d5; #fdf6e3}
 
-\code{#fillArrows: false}
+\verb{#fillArrows: false}
 
-\code{#font: Calibri}
+\verb{#font: Calibri}
 
-\code{#fontSize: 12}
+\verb{#fontSize: 12}
 
-\code{#leading: 1.25}
+\verb{#leading: 1.25}
 
-\code{#lineWidth: 3}
+\verb{#lineWidth: 3}
 
-\code{#padding: 8}
+\verb{#padding: 8}
 
-\code{#spacing: 40}
+\verb{#spacing: 40}
 
-\code{#stroke: #33322E}
+\verb{#stroke: #33322E}
 
-\code{#title: filename}
+\verb{#title: filename}
 
-\code{#zoom: 1}
+\verb{#zoom: 1}
 }
 
 \section{Custom Classifier Styles}{
@@ -165,19 +171,19 @@ A directive that starts with \code{.} define a classifier style.
 The style is written as a space separated list of modifiers and
 key/value pairs.
 
-\code{#.box: fill=#8f8 dashed}
+\verb{#.box: fill=#8f8 dashed}
 
-\code{#.blob: visual=ellipse}
+\verb{#.blob: visual=ellipse}
 
-\code{[<box> GreenBox]}
+\verb{[<box> GreenBox]}
 
-\code{[<blob> HideousBlob]}
+\verb{[<blob> HideousBlob]}
 
 Available key/value pairs are:
 
-\code{fill=(any css color)}
+\verb{fill=(any css color)}
 
-\code{stroke=(any css color)}
+\verb{stroke=(any css color)}
 
 \code{align=center}
 

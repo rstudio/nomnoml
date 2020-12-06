@@ -1,4 +1,4 @@
-#' Render Diagram
+#' Render nomnoml diagram.
 #'
 #' Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 #' as a 'png' image.
@@ -16,202 +16,202 @@
 #' The 'nomnoml' syntax is simple and intuitive, a "Hello World"
 #' example can be rendered as an 'htmlwidget' as follows:
 #' 
-#' \code{nomnoml::nomnoml("[Hello]-[World!]")}
+#' `nomnoml::nomnoml("[Hello]-[World!]")`
 #' 
 #' You can also render as a 'png' file with specific dimensions:
 #' 
-#' \code{nomnoml::nomnoml("[Hello]-[World!]", png = "hello.png", 600, 100)}
+#' `nomnoml::nomnoml("[Hello]-[World!]", png = "hello.png", 600, 100)`
 #' 
 #' Still, complex diagrams can be defined by combining multiple
 #' association types, classifier types, directives and
 #' custom classifier styles.
 #' 
-#' You can also use of the \code{nomnoml} 'knitr' chunk
+#' You can also use of the `nomnoml` 'knitr' chunk
 #' to render inline diagrams in R Markdown documents.
 #' 
 #' @section Association Types:
 #' 
-#' \code{association -}
+#' `association -`
 #' 
-#' \code{association ->}
+#' `association ->`
 #' 
-#' \code{association <->}
+#' `association <->`
 #' 
-#' \code{dependency -->}
+#' `dependency -->`
 #' 
-#' \code{dependency <-->}
+#' `dependency <-->`
 #' 
-#' \code{generalization -:>}
+#' `generalization -:>`
 #' 
-#' \code{generalization <:-}
+#' `generalization <:-`
 #' 
-#' \code{implementation --:>}
+#' `implementation --:>`
 #' 
-#' \code{implementation <:--}
+#' `implementation <:--`
 #' 
-#' \code{composition +-}
+#' `composition +-`
 #' 
-#' \code{composition +->}
+#' `composition +->`
 #' 
-#' \code{aggregation o-}
+#' `aggregation o-`
 #' 
-#' \code{aggregation o->}
+#' `aggregation o->`
 #' 
-#' \code{note --}
+#' `note --`
 #' 
-#' \code{hidden -/-}
+#' `hidden -/-`
 #' 
 #' @section Classifier Types:
 #' 
-#' \code{[name]}
+#' `[name]`
 #' 
-#' \code{[<abstract> name]}
+#' `[<abstract> name]`
 #' 
-#' \code{[<instance> name]}
+#' `[<instance> name]`
 #' 
-#' \code{[<note> name]}
+#' `[<note> name]`
 #' 
-#' \code{[<reference> name]}
+#' `[<reference> name]`
 #' 
-#' \code{[<package> name]}
+#' `[<package> name]`
 #' 
-#' \code{[<frame> name]}
+#' `[<frame> name]`
 #' 
-#' \code{[<database> name]}
+#' `[<database> name]`
 #' 
-#' \code{[<start> name]}
+#' `[<start> name]`
 #' 
-#' \code{[<end> name]}
+#' `[<end> name]`
 #' 
-#' \code{[<state> name]}
+#' `[<state> name]`
 #' 
-#' \code{[<choice> name]}
+#' `[<choice> name]`
 #' 
-#' \code{[<input> name]}
+#' `[<input> name]`
 #' 
-#' \code{[<sender> name]}
+#' `[<sender> name]`
 #' 
-#' \code{[<receiver> name]}
+#' `[<receiver> name]`
 #' 
-#' \code{[<transceiver> name]}
+#' `[<transceiver> name]`
 #' 
-#' \code{[<actor> name]}
+#' `[<actor> name]`
 #' 
-#' \code{[<usecase> name]}
+#' `[<usecase> name]`
 #' 
-#' \code{[<label> name]}
+#' `[<label> name]`
 #' 
-#' \code{[<hidden> name]}
+#' `[<hidden> name]`
 #' 
 #' @section Directives:
 #' 
-#' \code{#arrowSize: 1}
+#' `#arrowSize: 1`
 #' 
-#' \code{#bendSize: 0.3}
+#' `#bendSize: 0.3`
 #' 
-#' \code{#direction: down | right}
+#' `#direction: down | right`
 #' 
-#' \code{#gutter: 5}
+#' `#gutter: 5`
 #' 
-#' \code{#edgeMargin: 0}
+#' `#edgeMargin: 0`
 #' 
-#' \code{#edges: hard | rounded}
+#' `#edges: hard | rounded`
 #' 
-#' \code{#fill: #eee8d5; #fdf6e3}
+#' `#fill: #eee8d5; #fdf6e3`
 #' 
-#' \code{#fillArrows: false}
+#' `#fillArrows: false`
 #' 
-#' \code{#font: Calibri}
+#' `#font: Calibri`
 #' 
-#' \code{#fontSize: 12}
+#' `#fontSize: 12`
 #' 
-#' \code{#leading: 1.25}
+#' `#leading: 1.25`
 #' 
-#' \code{#lineWidth: 3}
+#' `#lineWidth: 3`
 #' 
-#' \code{#padding: 8}
+#' `#padding: 8`
 #' 
-#' \code{#spacing: 40}
+#' `#spacing: 40`
 #' 
-#' \code{#stroke: #33322E}
+#' `#stroke: #33322E`
 #' 
-#' \code{#title: filename}
+#' `#title: filename`
 #' 
-#' \code{#zoom: 1}
+#' `#zoom: 1`
 #' 
 #' @section Custom Classifier Styles:
 #' 
-#' A directive that starts with \code{.} define a classifier style.
+#' A directive that starts with `.` define a classifier style.
 #' The style is written as a space separated list of modifiers and
 #' key/value pairs.
 #' 
-#' \code{#.box: fill=#8f8 dashed}
+#' `#.box: fill=#8f8 dashed`
 #' 
-#' \code{#.blob: visual=ellipse}
+#' `#.blob: visual=ellipse`
 #' 
-#' \code{[<box> GreenBox]}
+#' `[<box> GreenBox]`
 #' 
-#' \code{[<blob> HideousBlob]}
+#' `[<blob> HideousBlob]`
 #' 
 #' Available key/value pairs are:
 #' 
-#' \code{fill=(any css color)}
+#' `fill=(any css color)`
 #' 
-#' \code{stroke=(any css color)}
+#' `stroke=(any css color)`
 #' 
-#' \code{align=center}
+#' `align=center`
 #' 
-#' \code{align=left}
+#' `align=left`
 #' 
-#' \code{direction=right}
+#' `direction=right`
 #' 
-#' \code{direction=down}
+#' `direction=down`
 #' 
-#' \code{visual=actor}
+#' `visual=actor`
 #' 
-#' \code{visual=class}
+#' `visual=class`
 #' 
-#' \code{visual=database}
+#' `visual=database`
 #' 
-#' \code{visual=ellipse}
+#' `visual=ellipse`
 #' 
-#' \code{visual=end}
+#' `visual=end`
 #' 
-#' \code{visual=frame}
+#' `visual=frame`
 #' 
-#' \code{visual=hidden}
+#' `visual=hidden`
 #' 
-#' \code{visual=input}
+#' `visual=input`
 #' 
-#' \code{visual=none}
+#' `visual=none`
 #' 
-#' \code{visual=note}
+#' `visual=note`
 #' 
-#' \code{visual=package}
+#' `visual=package`
 #' 
-#' \code{visual=receiver}
+#' `visual=receiver`
 #' 
-#' \code{visual=rhomb}
+#' `visual=rhomb`
 #' 
-#' \code{visual=roundrect}
+#' `visual=roundrect`
 #' 
-#' \code{visual=sender}
+#' `visual=sender`
 #' 
-#' \code{visual=start}
+#' `visual=start`
 #' 
-#' \code{visual=transceiver}
+#' `visual=transceiver`
 #' 
 #' Available modifiers are:
 #' 
-#' \code{bold}
+#' `bold`
 #' 
-#' \code{underline}
+#' `underline`
 #' 
-#' \code{italic}
+#' `italic`
 #' 
-#' \code{dashed}
+#' `dashed`
 #' 
-#' \code{empty}
+#' `empty`
 #' 
 #' @examples 
 #' # Render simple diagram:
@@ -275,12 +275,12 @@ nomnoml <- function(
 #' applications and interactive Rmd documents.
 #'
 #' @param outputId output variable to read from
-#' @param width,height Must be a valid CSS unit (like \code{'100\%'},
-#'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
-#'   string and have \code{'px'} appended.
+#' @param width,height Must be a valid CSS unit (like `'100\%'`,
+#'   `'400px'`, `'auto'`) or a number, which will be coerced to a
+#'   string and have `'px'` appended.
 #' @param expr An expression that generates a nomnoml
-#' @param env The environment in which to evaluate \code{expr}.
-#' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
+#' @param env The environment in which to evaluate `expr`.
+#' @param quoted Is `expr` a quoted expression (with `quote()`)? This
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @name nomnoml-shiny
