@@ -77,6 +77,7 @@ jobs:
       - name: Install dependencies
         run: |
           remotes::install_deps(dependencies = TRUE)
+          webshot::install_phantomjs()
           remotes::install_cran("rcmdcheck")
         shell: Rscript {0}
 
