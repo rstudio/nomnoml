@@ -5,7 +5,7 @@
   "output": {
     "diagram_canvas": {
       "x": {
-        "code": "\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [hello]->[foo bar baz]",
+        "code": "\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[hello]->[foo bar baz]",
         "svg": false
       },
       "evals": [
@@ -20,7 +20,7 @@
     },
     "diagram_svg": {
       "x": {
-        "code": "\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [hello]->[foo bar baz]",
+        "code": "\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[hello]->[foo bar baz]",
         "svg": true
       },
       "evals": [

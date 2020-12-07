@@ -1,11 +1,11 @@
 {
   "input": {
-    "textbox": "foo"
+    "textbox": "world"
   },
   "output": {
     "diagram_canvas": {
       "x": {
-        "code": "\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [hello]->[foo]",
+        "code": "\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[hello]->[world]",
         "svg": false
       },
       "evals": [
@@ -20,7 +20,7 @@
     },
     "diagram_svg": {
       "x": {
-        "code": "\n  #fill: #FEFEFF\n  #lineWidth: 1\n  #zoom: 4\n  #direction: right\n   [hello]->[foo]",
+        "code": "\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[hello]->[world]",
         "svg": true
       },
       "evals": [

@@ -25,7 +25,7 @@ Suggests:
     knitr,
     rmarkdown,
     testthat,
-    shinytest
+    shinytest,
     covr
 URL: https://github.com/rstudio/nomnoml
 BugReports: https://github.com/rstudio/nomnoml/issues
