@@ -7,7 +7,7 @@ nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nomnoml)](https://cran.r-project.org/package=nomnoml)
 <a href="https://www.r-pkg.org/pkg/nomnoml"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a>
 [![R build
-status](https://github.com/javierluraschi/nomnoml/workflows/R-CMD-check/badge.svg)](https://github.com/javierluraschi/nomnoml/actions)
+status](https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/nomnoml/actions)
 <!-- badges: end -->
 
 **nomnoml** provides an R interface to
