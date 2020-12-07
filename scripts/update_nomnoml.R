@@ -9,8 +9,9 @@ nomnoml_js <-
   )
 
 
-idx <- grep("nomnoml.version", nomnoml_js)
-nomnoml_version <- gsub("^.*nomnoml.version = '(.*?)';$", "\\1", nomnoml_js[idx])
+
+idx <- grep("^\\s*var version", nomnoml_js)
+nomnoml_version <- gsub("^\\s*var version = '(.*?)';$", "\\1", nomnoml_js[idx])
 
 message("Updating to nomnoml version: ", nomnoml_version)
 
@@ -21,61 +22,33 @@ writeLines(
 
 config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
 config <- yaml::read_yaml(config_file)
-config$dependencies[[3]]$version <- nomnoml_version
+config$dependencies[[2]]$version <- nomnoml_version
 yaml::write_yaml(config, config_file)
 
 
 
-# dagre -------------------------------------------------------------------
+# graphre -----------------------------------------------------------------
 
 
-dagre_js <-  
+graphre_js <-  
   readLines(
-    "https://raw.githubusercontent.com/skanaar/nomnoml/master/lib/dagre.min.js",
+    "https://raw.githubusercontent.com/skanaar/graphre/master/dist/graphre.js",
     warn = FALSE
   )
 
 
-dagre_version <- gsub('^.*t.exports="(.*?)".*', "\\1", dagre_js)
-dagre_version
+graphre_version <- gsub('^.*e.version="(.*?)".*', "\\1", graphre_js)
+graphre_version
 
-message("Updating to dagre version: ", dagre_version)
+message("Updating to graphre version: ", graphre_version)
 
 writeLines(
-  dagre_js,
-  file.path("inst", "htmlwidgets", "lib", "dagre", "dagre.min.js")
+  graphre_js,
+  file.path("inst", "htmlwidgets", "lib", "graphre", "graphre.js")
 )
 
 config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
 config <- yaml::read_yaml(config_file)
-config$dependencies[[1]]$version <- dagre_version
+config$dependencies[[1]]$version <- graphre_version
 yaml::write_yaml(config, config_file)
 
-
-
-# lodash ------------------------------------------------------------------
-
-
-
-lodash_version <- "4.17.15"
-
-lodash_js <-  
-  readLines(
-    sprintf("https://raw.githubusercontent.com/lodash/lodash/%s-npm/lodash.js", lodash_version),
-    warn = FALSE
-  )
-
-
-lodash_version
-
-message("Updating to lodash version: ", lodash_version)
-
-writeLines(
-  lodash_js,
-  file.path("inst", "htmlwidgets", "lib", "lodash", "lodash.js")
-)
-
-config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
-config <- yaml::read_yaml(config_file)
-config$dependencies[[2]]$version <- lodash_version
-yaml::write_yaml(config, config_file)
