@@ -40,6 +40,7 @@ jobs:
         run: |
           install.packages(c("remotes"))
           remotes::install_deps(dependencies = TRUE)
+          webshot::install_phantomjs()
           remotes::install_cran("covr")
         shell: Rscript {0}
 
