@@ -4,7 +4,7 @@
 \alias{nomnoml-shiny}
 \alias{nomnomlOutput}
 \alias{renderNomnoml}
-\title{Shiny bindings for nomnoml}
+\title{Shiny bindings for nomnoml.}
 \usage{
 nomnomlOutput(outputId, width = "100\%", height = "400px")
 
@@ -13,7 +13,7 @@ renderNomnoml(expr, env = parent.frame(), quoted = FALSE)
 \arguments{
 \item{outputId}{output variable to read from}
 
-\item{width, height}{Must be a valid CSS unit (like \code{'100\\\%'},
+\item{width, height}{Must be a valid CSS unit (like \code{'100\%'},
 \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 string and have \code{'px'} appended.}
 
@@ -25,6 +25,11 @@ string and have \code{'px'} appended.}
 is useful if you want to save an expression in a variable.}
 }
 \description{
+\lifecycle{maturing}
+
 Output and render functions for using nomnoml within Shiny
 applications and interactive Rmd documents.
+}
+\seealso{
+\code{\link[=nomnoml]{nomnoml()}}
 }

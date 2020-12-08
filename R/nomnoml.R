@@ -1,5 +1,9 @@
 #' Render nomnoml diagram.
 #'
+#' @description 
+#' 
+#' \lifecycle{maturing}
+#' 
 #' Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 #' as a 'png' image.
 #' 
@@ -10,6 +14,7 @@
 #' @param svg Use 'svg' output instead of 'png'? Notice that rendering in
 #'   'svg' is not at a par with 'png' and renders incorrectly at times.
 #' @param ... Additional parameters.
+#' 
 #' 
 #' @details
 #' 
@@ -230,6 +235,9 @@
 #'   ]")
 #'
 #' @import htmlwidgets
+#' 
+#' @seealso [nomnomlOutput()], [renderNomnoml()]
+#' 
 #' @export
 nomnoml <- function(
   code = "[Hello]-[World!]",
@@ -269,13 +277,17 @@ nomnoml <- function(
   }
 }
 
-#' Shiny bindings for nomnoml
+#' Shiny bindings for nomnoml.
+#' 
+#' @description 
+#' 
+#' \lifecycle{maturing}
 #'
 #' Output and render functions for using nomnoml within Shiny
 #' applications and interactive Rmd documents.
 #'
 #' @param outputId output variable to read from
-#' @param width,height Must be a valid CSS unit (like `'100\%'`,
+#' @param width,height Must be a valid CSS unit (like `'100%'`,
 #'   `'400px'`, `'auto'`) or a number, which will be coerced to a
 #'   string and have `'px'` appended.
 #' @param expr An expression that generates a nomnoml
@@ -284,6 +296,8 @@ nomnoml <- function(
 #'   is useful if you want to save an expression in a variable.
 #'
 #' @name nomnoml-shiny
+#' 
+#' @seealso [nomnoml()]
 #'
 #' @export
 nomnomlOutput <- function(outputId, width = '100%', height = '400px'){

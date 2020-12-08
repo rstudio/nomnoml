@@ -28,6 +28,8 @@ nomnoml(
 \item{...}{Additional parameters.}
 }
 \description{
+\lifecycle{maturing}
+
 Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 as a 'png' image.
 }
@@ -256,4 +258,7 @@ nomnoml::nomnoml("
     [Component] <:- [ConcreteComponent]
   ]")
 
+}
+\seealso{
+\code{\link[=nomnomlOutput]{nomnomlOutput()}}, \code{\link[=renderNomnoml]{renderNomnoml()}}
 }
