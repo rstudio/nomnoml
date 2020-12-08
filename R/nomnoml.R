@@ -259,6 +259,8 @@ nomnoml <- function(
   )
   
   if (!is.null(png)) {
+    if (svg) stop("Parameter 'svg' must be false when creating PNGs.")
+    
     file <- tempfile(fileext = ".html")
     htmlwidgets::saveWidget(widget, file)
     
