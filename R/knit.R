@@ -18,17 +18,28 @@ resize_image_if_needed <- function(image, max_width, max_height) {
   
   if (max_ratio > 1 && ratio < 1 || max_ratio < 1 && ratio > 1) {
     tar_height <- ratio * max_width
-    graphics::rasterImage(original, usr[1], usr[3]  + (max_height - tar_height) / 2, usr[2], usr[4] - (max_height - tar_height) / 2)
+    graphics::rasterImage(original, 
+                          xleft = usr[1], 
+                          ybottom = usr[3]  + (max_height - tar_height) / 2, 
+                          xright = usr[2], 
+                          ytop = usr[4] - (max_height - tar_height) / 2
+    )
     grDevices::dev.off()
   }
   else {
     tar_width <- ratio * max_height
-    graphics::rasterImage(original, usr[1] + (max_width - tar_width) / 2, usr[3], usr[2] - (max_width - tar_width) / 2, usr[4])
+    graphics::rasterImage(original, 
+                          xleft = usr[1] + (max_width - tar_width) / 2, 
+                          ybottom = usr[3], 
+                          xright = usr[2] - (max_width - tar_width) / 2, 
+                          ytop = usr[4]
+    )
     grDevices::dev.off()
   }
   
   image_resized
 }
+
 
 knit_nomnoml <- function (options) {
   knit_print <- get("knit_print", envir = asNamespace("knitr"))
@@ -81,7 +92,10 @@ knit_nomnoml <- function (options) {
     png <- resize_image_if_needed(png, widget_width, widget_height)
     
     res = readBin(png, "raw", file.info(png)[, "size"])
-    image_output <- structure(list(image = res, extension = ".png"), class = "html_screenshot")
+    image_output <- structure(
+      list(image = res, extension = ".png"), 
+      class = "html_screenshot"
+    )
     
     if (identical(options$echo, FALSE)) {
       render_output <- list(
