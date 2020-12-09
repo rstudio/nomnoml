@@ -8,8 +8,7 @@ output:
 ```{r setup, include=FALSE}
 library(nomnoml)
 knitr::opts_chunk$set(eval = TRUE)
-knitr::opts_chunk$set(warning = FALSE)
-knitr::opts_chunk$set(fig.path = "tools/readme/", dev = "png")
+knitr::opts_chunk$set(fig.path = "man/figures/readme/", dev = "png")
 ```
 
 # nomnoml <img src='man/figures/logo.svg' align="right" height="139" />

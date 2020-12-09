@@ -1,6 +1,5 @@
 
-nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
-=====================================================================
+# nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
 
 <!-- badges: start -->
 
@@ -18,8 +17,7 @@ maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www
 [nomnoml](http://www.nomnoml.com/), a tool for drawing sassy UML
 diagrams based on syntax with customizable styling.
 
-Installation
-------------
+## Installation
 
 Install from CRAN:
 
@@ -30,14 +28,13 @@ Or from GitHub using:
     install.packages("remotes")
     remotes::install_github("rstudio/nomnoml")
 
-Getting Started
----------------
+## Getting Started
 
 You can create your first diagram by running:
 
     nomnoml::nomnoml("[Hello]-[World!]")
 
-![](tools/readme/nomnoml-simple-1.png)<!-- -->
+![](man/figures/readme/nomnoml-simple-1.png)<!-- -->
 
 To make the diagram flow vertically, the default at
 [nomnoml.com](http://www.nomnoml.com/), add the
@@ -46,7 +43,7 @@ To make the diagram flow vertically, the default at
     #direction: down
     [Hello]-[World!]
 
-![](tools/readme/nomnoml-vertical-2.png)<!-- -->
+![](man/figures/readme/nomnoml-vertical-2.png)<!-- -->
 
 You can also use `nomnoml` in R Markdown:
 
@@ -67,7 +64,7 @@ You can also use `nomnoml` in R Markdown:
     [B]-[<box>C]
     ```
 
-![](tools/readme/nomnoml-multiline-3.png)<!-- -->
+![](man/figures/readme/nomnoml-multiline-3.png)<!-- -->
 
 ### SVG
 
@@ -86,7 +83,7 @@ options
     [B]-[<box>C]
     ```
 
-![](tools/readme/nomnoml-svg-1.png)<!-- -->
+![](man/figures/readme/nomnoml-svg-1.png)<!-- -->
 
 ### Advanced
 
@@ -105,7 +102,7 @@ classifier styles.
       [Component] <:- [ConcreteComponent]
     ]
 
-![](tools/readme/nomnoml-decorator-2.png)<!-- -->
+![](man/figures/readme/nomnoml-decorator-2.png)<!-- -->
 
 ### Association types
 
@@ -210,8 +207,7 @@ Available modifiers are
     dashed
     empty
 
-Contributing
-------------
+## Contributing
 
 Please refer to
 [github.com/skanaar/nomnoml](https://github.com/skanaar/nomnoml).
