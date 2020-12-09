@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Shiny bindings for nomnoml. — nomnoml-shiny • nomnoml</title>
+<title>nomnoml_syntax — nomnoml-syntax • nomnoml</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,10 +46,8 @@
 
 
 
-<meta property="og:title" content="Shiny bindings for nomnoml. — nomnoml-shiny" />
-<meta property="og:description" content="
-Output and render functions for using nomnoml within Shiny
-applications and interactive Rmd documents." />
+<meta property="og:title" content="nomnoml_syntax — nomnoml-syntax" />
+<meta property="og:description" content="Summary of nomnoml syntax." />
 <meta property="og:image" content="/logo.svg" />
 
 
@@ -133,52 +131,131 @@ applications and interactive Rmd documents." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Shiny bindings for nomnoml.</h1>
-    <small class="dont-index">Source: <a href='https://github.com/rstudio/nomnoml/blob/master/R/nomnoml.R'><code>R/nomnoml.R</code></a></small>
-    <div class="hidden name"><code>nomnoml-shiny.Rd</code></div>
+    <h1>nomnoml_syntax</h1>
+    <small class="dont-index">Source: <a href='https://github.com/rstudio/nomnoml/blob/master/R/syntax.R'><code>R/syntax.R</code></a></small>
+    <div class="hidden name"><code>nomnoml_syntax.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><a href='https://www.tidyverse.org/lifecycle/#maturing'><img src='figures/lifecycle-maturing.svg' alt='Maturing lifecycle'></a></p>
-<p>Output and render functions for using nomnoml within Shiny
-applications and interactive Rmd documents.</p>
+    <p>Summary of nomnoml syntax.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>nomnomlOutput</span><span class='op'>(</span><span class='va'>outputId</span>, width <span class='op'>=</span> <span class='st'>"100%"</span>, height <span class='op'>=</span> <span class='st'>"400px"</span><span class='op'>)</span>
 
-<span class='fu'>renderNomnoml</span><span class='op'>(</span><span class='va'>expr</span>, env <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sys.parent.html'>parent.frame</a></span><span class='op'>(</span><span class='op'>)</span>, quoted <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>outputId</th>
-      <td><p>output variable to read from</p></td>
-    </tr>
-    <tr>
-      <th>width, height</th>
-      <td><p>Must be a valid CSS unit (like <code>'100%'</code>,
-<code>'400px'</code>, <code>'auto'</code>) or a number, which will be coerced to a
-string and have <code>'px'</code> appended.</p></td>
-    </tr>
-    <tr>
-      <th>expr</th>
-      <td><p>An expression that generates a nomnoml</p></td>
-    </tr>
-    <tr>
-      <th>env</th>
-      <td><p>The environment in which to evaluate <code>expr</code>.</p></td>
-    </tr>
-    <tr>
-      <th>quoted</th>
-      <td><p>Is <code>expr</code> a quoted expression (with <code><a href='https://rdrr.io/r/base/substitute.html'>quote()</a></code>)? This
-is useful if you want to save an expression in a variable.</p></td>
-    </tr>
-    </table>
+    <h2 class="hasAnchor" id="association-types"><a class="anchor" href="#association-types"></a>Association Types</h2>
 
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    
 
-    <div class='dont-index'><p><code><a href='nomnoml.html'>nomnoml()</a></code></p></div>
+
+<p><code>association -</code></p>
+<p><code>association -&gt;</code></p>
+<p><code>association &lt;-&gt;</code></p>
+<p><code>dependency --&gt;</code></p>
+<p><code>dependency &lt;--&gt;</code></p>
+<p><code>generalization -:&gt;</code></p>
+<p><code>generalization &lt;:-</code></p>
+<p><code>implementation --:&gt;</code></p>
+<p><code>implementation &lt;:--</code></p>
+<p><code>composition +-</code></p>
+<p><code>composition +-&gt;</code></p>
+<p><code>aggregation o-</code></p>
+<p><code>aggregation o-&gt;</code></p>
+<p><code>note --</code></p>
+<p><code>hidden -/-</code></p>
+    <h2 class="hasAnchor" id="classifier-types"><a class="anchor" href="#classifier-types"></a>Classifier Types</h2>
+
+    
+
+
+<p><code>[name]</code></p>
+<p><code>[&lt;abstract&gt; name]</code></p>
+<p><code>[&lt;instance&gt; name]</code></p>
+<p><code>[&lt;note&gt; name]</code></p>
+<p><code>[&lt;reference&gt; name]</code></p>
+<p><code>[&lt;package&gt; name]</code></p>
+<p><code>[&lt;frame&gt; name]</code></p>
+<p><code>[&lt;database&gt; name]</code></p>
+<p><code>[&lt;start&gt; name]</code></p>
+<p><code>[&lt;end&gt; name]</code></p>
+<p><code>[&lt;state&gt; name]</code></p>
+<p><code>[&lt;choice&gt; name]</code></p>
+<p><code>[&lt;input&gt; name]</code></p>
+<p><code>[&lt;sender&gt; name]</code></p>
+<p><code>[&lt;receiver&gt; name]</code></p>
+<p><code>[&lt;transceiver&gt; name]</code></p>
+<p><code>[&lt;actor&gt; name]</code></p>
+<p><code>[&lt;usecase&gt; name]</code></p>
+<p><code>[&lt;label&gt; name]</code></p>
+<p><code>[&lt;hidden&gt; name]</code></p>
+    <h2 class="hasAnchor" id="directives"><a class="anchor" href="#directives"></a>Directives</h2>
+
+    
+
+
+<p><code>#arrowSize: 1</code></p>
+<p><code>#bendSize: 0.3</code></p>
+<p><code>#direction: down | right</code></p>
+<p><code>#gutter: 5</code></p>
+<p><code>#edgeMargin: 0</code></p>
+<p><code>#edges: hard | rounded</code></p>
+<p><code>#fill: #eee8d5; #fdf6e3</code></p>
+<p><code>#fillArrows: false</code></p>
+<p><code>#font: Calibri</code></p>
+<p><code>#fontSize: 12</code></p>
+<p><code>#leading: 1.25</code></p>
+<p><code>#lineWidth: 3</code></p>
+<p><code>#padding: 8</code></p>
+<p><code>#spacing: 40</code></p>
+<p><code>#stroke: #33322E</code></p>
+<p><code>#title: filename</code></p>
+<p><code>#zoom: 1</code></p>
+    <h2 class="hasAnchor" id="custom-classifier-styles"><a class="anchor" href="#custom-classifier-styles"></a>Custom Classifier Styles</h2>
+
+    
+
+
+<p>A directive that starts with <code>.</code> define a classifier style.
+The style is written as a space separated list of modifiers and
+key/value pairs.</p>
+<p><code>#.box: fill=#8f8 dashed</code></p>
+<p><code>#.blob: visual=ellipse</code></p>
+<p><code>[&lt;box&gt; GreenBox]</code></p>
+<p><code>[&lt;blob&gt; HideousBlob]</code></p><h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Available key/value pairs are:</h3>
+
+
+<p><code>fill=(any css color)</code></p>
+<p><code>stroke=(any css color)</code></p>
+<p><code>align=center</code></p>
+<p><code>align=left</code></p>
+<p><code>direction=right</code></p>
+<p><code>direction=down</code></p>
+<p><code>visual=actor</code></p>
+<p><code>visual=class</code></p>
+<p><code>visual=database</code></p>
+<p><code>visual=ellipse</code></p>
+<p><code>visual=end</code></p>
+<p><code>visual=frame</code></p>
+<p><code>visual=hidden</code></p>
+<p><code>visual=input</code></p>
+<p><code>visual=none</code></p>
+<p><code>visual=note</code></p>
+<p><code>visual=package</code></p>
+<p><code>visual=receiver</code></p>
+<p><code>visual=rhomb</code></p>
+<p><code>visual=roundrect</code></p>
+<p><code>visual=sender</code></p>
+<p><code>visual=start</code></p>
+<p><code>visual=transceiver</code></p>
+
+<h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Available modifiers are:</h3>
+
+
+<p><code>bold</code></p>
+<p><code>underline</code></p>
+<p><code>italic</code></p>
+<p><code>dashed</code></p>
+<p><code>empty</code></p>
+
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

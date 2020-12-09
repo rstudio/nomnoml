@@ -47,7 +47,8 @@
 
 
 <meta property="og:title" content="Render nomnoml diagram. — nomnoml" />
-<meta property="og:description" content="Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
+<meta property="og:description" content="
+Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 as a 'png' image." />
 <meta property="og:image" content="/logo.svg" />
 
@@ -138,7 +139,8 @@ as a 'png' image." />
     </div>
 
     <div class="ref-description">
-    <p>Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
+    <p><a href='https://www.tidyverse.org/lifecycle/#maturing'><img src='figures/lifecycle-maturing.svg' alt='Maturing lifecycle'></a></p>
+<p>Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 as a 'png' image.</p>
     </div>
 
@@ -193,115 +195,16 @@ association types, classifier types, directives and
 custom classifier styles.</p>
 <p>You can also use of the <code>nomnoml</code> 'knitr' chunk
 to render inline diagrams in R Markdown documents.</p>
-    <h2 class="hasAnchor" id="association-types"><a class="anchor" href="#association-types"></a>Association Types</h2>
+    <h2 class="hasAnchor" id="syntax"><a class="anchor" href="#syntax"></a>Syntax</h2>
 
     
 
 
-<p><code>association -</code></p>
-<p><code>association -&gt;</code></p>
-<p><code>association &lt;-&gt;</code></p>
-<p><code>dependency --&gt;</code></p>
-<p><code>dependency &lt;--&gt;</code></p>
-<p><code>generalization -:&gt;</code></p>
-<p><code>generalization &lt;:-</code></p>
-<p><code>implementation --:&gt;</code></p>
-<p><code>implementation &lt;:--</code></p>
-<p><code>composition +-</code></p>
-<p><code>composition +-&gt;</code></p>
-<p><code>aggregation o-</code></p>
-<p><code>aggregation o-&gt;</code></p>
-<p><code>note --</code></p>
-<p><code>hidden -/-</code></p>
-    <h2 class="hasAnchor" id="classifier-types"><a class="anchor" href="#classifier-types"></a>Classifier Types</h2>
+<p>For a summary of available <code>nomnoml</code> syntax, including association types,
+directives and customer classifier styles, see nomnoml_syntax</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
-    
-
-
-<p><code>[name]</code></p>
-<p><code>[&lt;abstract&gt; name]</code></p>
-<p><code>[&lt;instance&gt; name]</code></p>
-<p><code>[&lt;note&gt; name]</code></p>
-<p><code>[&lt;reference&gt; name]</code></p>
-<p><code>[&lt;package&gt; name]</code></p>
-<p><code>[&lt;frame&gt; name]</code></p>
-<p><code>[&lt;database&gt; name]</code></p>
-<p><code>[&lt;start&gt; name]</code></p>
-<p><code>[&lt;end&gt; name]</code></p>
-<p><code>[&lt;state&gt; name]</code></p>
-<p><code>[&lt;choice&gt; name]</code></p>
-<p><code>[&lt;input&gt; name]</code></p>
-<p><code>[&lt;sender&gt; name]</code></p>
-<p><code>[&lt;receiver&gt; name]</code></p>
-<p><code>[&lt;transceiver&gt; name]</code></p>
-<p><code>[&lt;actor&gt; name]</code></p>
-<p><code>[&lt;usecase&gt; name]</code></p>
-<p><code>[&lt;label&gt; name]</code></p>
-<p><code>[&lt;hidden&gt; name]</code></p>
-    <h2 class="hasAnchor" id="directives"><a class="anchor" href="#directives"></a>Directives</h2>
-
-    
-
-
-<p><code>#arrowSize: 1</code></p>
-<p><code>#bendSize: 0.3</code></p>
-<p><code>#direction: down | right</code></p>
-<p><code>#gutter: 5</code></p>
-<p><code>#edgeMargin: 0</code></p>
-<p><code>#edges: hard | rounded</code></p>
-<p><code>#fill: #eee8d5; #fdf6e3</code></p>
-<p><code>#fillArrows: false</code></p>
-<p><code>#font: Calibri</code></p>
-<p><code>#fontSize: 12</code></p>
-<p><code>#leading: 1.25</code></p>
-<p><code>#lineWidth: 3</code></p>
-<p><code>#padding: 8</code></p>
-<p><code>#spacing: 40</code></p>
-<p><code>#stroke: #33322E</code></p>
-<p><code>#title: filename</code></p>
-<p><code>#zoom: 1</code></p>
-    <h2 class="hasAnchor" id="custom-classifier-styles"><a class="anchor" href="#custom-classifier-styles"></a>Custom Classifier Styles</h2>
-
-    
-
-
-<p>A directive that starts with <code>.</code> define a classifier style.
-The style is written as a space separated list of modifiers and
-key/value pairs.</p>
-<p><code>#.box: fill=#8f8 dashed</code></p>
-<p><code>#.blob: visual=ellipse</code></p>
-<p><code>[&lt;box&gt; GreenBox]</code></p>
-<p><code>[&lt;blob&gt; HideousBlob]</code></p>
-<p>Available key/value pairs are:</p>
-<p><code>fill=(any css color)</code></p>
-<p><code>stroke=(any css color)</code></p>
-<p><code>align=center</code></p>
-<p><code>align=left</code></p>
-<p><code>direction=right</code></p>
-<p><code>direction=down</code></p>
-<p><code>visual=actor</code></p>
-<p><code>visual=class</code></p>
-<p><code>visual=database</code></p>
-<p><code>visual=ellipse</code></p>
-<p><code>visual=end</code></p>
-<p><code>visual=frame</code></p>
-<p><code>visual=hidden</code></p>
-<p><code>visual=input</code></p>
-<p><code>visual=none</code></p>
-<p><code>visual=note</code></p>
-<p><code>visual=package</code></p>
-<p><code>visual=receiver</code></p>
-<p><code>visual=rhomb</code></p>
-<p><code>visual=roundrect</code></p>
-<p><code>visual=sender</code></p>
-<p><code>visual=start</code></p>
-<p><code>visual=transceiver</code></p>
-<p>Available modifiers are:</p>
-<p><code>bold</code></p>
-<p><code>underline</code></p>
-<p><code>italic</code></p>
-<p><code>dashed</code></p>
-<p><code>empty</code></p>
+    <div class='dont-index'><p><code><a href='nomnoml-shiny.html'>nomnomlOutput()</a></code>, <code><a href='nomnoml-shiny.html'>renderNomnoml()</a></code></p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Render simple diagram:</span>
