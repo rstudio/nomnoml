@@ -1,0 +1,22 @@
+---
+title: "Test nomnoml"
+output: 
+  html_document:
+    self_contained: FALSE
+---
+
+```{r setup}
+# knitr::opts_chunk$set(dev = "png")
+library(nomnoml)
+```
+
+
+## Getting Started
+
+```{nomnoml one, width="250px", height="75px", echo=FALSE}
+[Hello]-[World!]
+```
+
+```{nomnoml two, width="250px", height="75px", echo=FALSE, svg = TRUE}
+[Hello]-[World!]
+```
