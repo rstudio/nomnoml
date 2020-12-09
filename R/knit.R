@@ -38,7 +38,11 @@ knit_nomnoml <- function (options) {
   widget_width <- options$width
   widget_height <- options$height
   fixed_image <- FALSE
-  is_rstudio <- identical(.Platform$GUI, "RStudio")
+  
+  # is_rstudio should only be TRUE if the "knit" button was pressed
+  is_rstudio <- 
+    identical(.Platform$GUI, "RStudio") && 
+    !getOption("knitr.in.progress", FALSE)
   
   if (!is.null(widget_width) && !is.null(widget_width)) {
     fixed_image <- all(grepl("px$", c(widget_width, widget_height)))
