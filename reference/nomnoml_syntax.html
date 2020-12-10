@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">nomnoml</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1.9000</span>
       </span>
     </div>
 
@@ -162,6 +162,8 @@
 <p><code>aggregation o-&gt;</code></p>
 <p><code>note --</code></p>
 <p><code>hidden -/-</code></p>
+<p><code>weightless edge _&gt;</code></p>
+<p><code>weightless dashed __</code></p>
     <h2 class="hasAnchor" id="classifier-types"><a class="anchor" href="#classifier-types"></a>Classifier Types</h2>
 
     
@@ -187,6 +189,7 @@
 <p><code>[&lt;usecase&gt; name]</code></p>
 <p><code>[&lt;label&gt; name]</code></p>
 <p><code>[&lt;hidden&gt; name]</code></p>
+<p><code>[&lt;table&gt; table | a | 5 | b | 7]</code></p>
     <h2 class="hasAnchor" id="directives"><a class="anchor" href="#directives"></a>Directives</h2>
 
     
@@ -198,6 +201,7 @@
 <p><code>#gutter: 5</code></p>
 <p><code>#edgeMargin: 0</code></p>
 <p><code>#edges: hard | rounded</code></p>
+<p><code>#background: transparent</code></p>
 <p><code>#fill: #eee8d5; #fdf6e3</code></p>
 <p><code>#fillArrows: false</code></p>
 <p><code>#font: Calibri</code></p>
@@ -209,6 +213,8 @@
 <p><code>#stroke: #33322E</code></p>
 <p><code>#title: filename</code></p>
 <p><code>#zoom: 1</code></p>
+<p><code>#acyclicer: greedy</code></p>
+<p><code>#ranker: network-simplex | tight-tree | longest-path</code></p>
     <h2 class="hasAnchor" id="custom-classifier-styles"><a class="anchor" href="#custom-classifier-styles"></a>Custom Classifier Styles</h2>
 
     
@@ -247,7 +253,13 @@ key/value pairs.</p>
 <p><code>visual=start</code></p>
 <p><code>visual=transceiver</code></p>
 
-<h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Available modifiers are:</h3>
+<h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Style title and text body</h3>
+
+
+<p><code>title=left,italic,bold</code></p>
+<p><code>body=center,italic,bold</code></p>
+
+<h3 class='hasAnchor' id='arguments'><a class='anchor' href='#arguments'></a>Text modifiers:</h3>
 
 
 <p><code>bold</code></p>
