@@ -20,7 +20,8 @@ Imports:
     htmlwidgets,
     png,
     webshot,
-    lifecycle
+    lifecycle,
+    V8
 RoxygenNote: 7.1.1
 Suggests:
     knitr,

@@ -2,5 +2,7 @@
 
 export(nomnoml)
 export(nomnomlOutput)
+export(nomnoml_validate)
 export(renderNomnoml)
 import(htmlwidgets)
+importFrom(V8,v8)

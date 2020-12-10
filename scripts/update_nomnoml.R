@@ -17,13 +17,13 @@ message("Updating to nomnoml version: ", nomnoml_version)
 
 writeLines(
   nomnoml_js,
-  file.path("inst", "htmlwidgets", "lib", "nomnoml", "nomnoml.js")
+  file.path("inst", "htmlwidgets", "lib-raw", "nomnoml.js")
 )
 
-config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
-config <- yaml::read_yaml(config_file)
-config$dependencies[[2]]$version <- nomnoml_version
-yaml::write_yaml(config, config_file)
+# config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
+# config <- yaml::read_yaml(config_file)
+# config$dependencies[[4]]$version <- nomnoml_version
+# yaml::write_yaml(config, config_file)
 
 
 
@@ -44,11 +44,11 @@ message("Updating to graphre version: ", graphre_version)
 
 writeLines(
   graphre_js,
-  file.path("inst", "htmlwidgets", "lib", "graphre", "graphre.js")
+  file.path("inst", "htmlwidgets", "lib-raw", "graphre.js")
 )
 
-config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
-config <- yaml::read_yaml(config_file)
-config$dependencies[[1]]$version <- graphre_version
-yaml::write_yaml(config, config_file)
+# config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
+# config <- yaml::read_yaml(config_file)
+# config$dependencies[[3]]$version <- graphre_version
+# yaml::write_yaml(config, config_file)
 
