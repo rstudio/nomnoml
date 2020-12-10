@@ -1,7 +1,7 @@
 Package: nomnoml
 Type: Package
 Title: Sassy 'UML' Diagrams
-Version: 0.2.1
+Version: 0.2.1.9000
 Authors@R: c(
     person("Andrie", "de Vries", email = "apdevries@gmail.com", role = c("aut", "cre")),
     person("Javier", "Luraschi", email = "jluraschi@gmail.com", role = "aut"),

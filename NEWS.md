@@ -1,7 +1,22 @@
+# nomnoml 0.2.1.9000
 
-# nomnoml 0.2.0
+- Update `nomnoml` to v1.3.1 (taking dependency on `graphre`)
 
-- Updated nomnoml to v1.3.1 (taking dependency on graphre)
+- Add additional tests and improved code coverage
+
+- Add `pkgdown` documentation site
+
+
+# nomnoml 0.2.1 (2020-12-04)
+
+- Change maintainer to @andrie
+
+- Add additional tests
+
+
+# nomnoml 0.2.0 (2020-05-26)
+
+- Update `nomnoml` to version 0.7.2
 
 - Add support for 'svg' output in 'nomnoml()'.
 
@@ -10,7 +25,9 @@
 - Fix duplicate diagrams in Shiny apps (@andrie, #15).
 
 
-# nomnoml 0.1.0
+# nomnoml 0.1.0 (2019-06-13)
+
+- Use `nomnoml` version 0.2.0
 
 - Support to render PNGs.
 
