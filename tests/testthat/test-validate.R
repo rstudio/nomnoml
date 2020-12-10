@@ -4,8 +4,7 @@ test_that("diagram validation via V8 works", {
   # (xenial 16.04 is still the os on github actions)
   
   skip_on_os("linux")
-  
-  expect_equal(2 * 2, 4)
+  skip_on_cran()
   
   expect_true(
     nomnoml_validate("[hello]")

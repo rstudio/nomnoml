@@ -24,7 +24,7 @@ This function returns \code{TRUE} if a diagram can be parsed, and \code{FALSE}
 otherwise.  If \code{FALSE} the function also throws a warning.
 }
 \examples{
-nomnoml_validate("[hello]-> [world]")
+if (requireNamespace("V8", quietly = TRUE)) nomnoml_validate("[hello]-> [world]")
 }
 \seealso{
 \code{\link[=nomnoml]{nomnoml()}}
