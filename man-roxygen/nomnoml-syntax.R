@@ -30,6 +30,10 @@
 #' 
 #' `hidden -/-`
 #' 
+#' `weightless edge _>`
+#' 
+#' `weightless dashed __`
+#' 
 #' @section Classifier Types:
 #' 
 #' `[name]`
@@ -72,6 +76,8 @@
 #' 
 #' `[<hidden> name]`
 #' 
+#' `[<table> table | a | 5 | b | 7]`
+#' 
 #' @section Directives:
 #' 
 #' `#arrowSize: 1`
@@ -85,6 +91,8 @@
 #' `#edgeMargin: 0`
 #' 
 #' `#edges: hard | rounded`
+#' 
+#' `#background: transparent`
 #' 
 #' `#fill: #eee8d5; #fdf6e3`
 #' 
@@ -107,6 +115,10 @@
 #' `#title: filename`
 #' 
 #' `#zoom: 1`
+#' 
+#' `#acyclicer: greedy`
+#' 
+#' `#ranker: network-simplex | tight-tree | longest-path`
 #' 
 #' @section Custom Classifier Styles:
 #' 
@@ -169,8 +181,15 @@
 #' `visual=start`
 #' 
 #' `visual=transceiver`
+#'
+#'
+#' ## Style title and text body
 #' 
-#' ## Available modifiers are:
+#' `title=left,italic,bold`
+#' 
+#' `body=center,italic,bold`
+#' 
+#' ## Text modifiers:
 #' 
 #' `bold`
 #' 

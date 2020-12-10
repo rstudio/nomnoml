@@ -39,6 +39,10 @@ Summary of nomnoml syntax.
 \verb{note --}
 
 \verb{hidden -/-}
+
+\verb{weightless edge _>}
+
+\verb{weightless dashed __}
 }
 
 \section{Classifier Types}{
@@ -83,6 +87,8 @@ Summary of nomnoml syntax.
 \verb{[<label> name]}
 
 \verb{[<hidden> name]}
+
+\verb{[<table> table | a | 5 | b | 7]}
 }
 
 \section{Directives}{
@@ -99,6 +105,8 @@ Summary of nomnoml syntax.
 \verb{#edgeMargin: 0}
 
 \verb{#edges: hard | rounded}
+
+\verb{#background: transparent}
 
 \verb{#fill: #eee8d5; #fdf6e3}
 
@@ -121,6 +129,10 @@ Summary of nomnoml syntax.
 \verb{#title: filename}
 
 \verb{#zoom: 1}
+
+\verb{#acyclicer: greedy}
+
+\verb{#ranker: network-simplex | tight-tree | longest-path}
 }
 
 \section{Custom Classifier Styles}{
@@ -186,7 +198,14 @@ key/value pairs.
 \code{visual=transceiver}
 }
 
-\subsection{Available modifiers are:}{
+\subsection{Style title and text body}{
+
+\verb{title=left,italic,bold}
+
+\verb{body=center,italic,bold}
+}
+
+\subsection{Text modifiers:}{
 
 \code{bold}
 
