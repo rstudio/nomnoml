@@ -23,6 +23,7 @@ Imports:
     lifecycle
 RoxygenNote: 7.1.1
 Suggests:
+    V8,
     knitr,
     rmarkdown,
     testthat,
