@@ -18,11 +18,12 @@
 #' @export
 #' @seealso [nomnoml()]
 #'
-#' @importFrom V8 v8
-#' 
 #' @examples
 #' nomnoml_validate("[hello]-> [world]")
 nomnoml_validate <- function(diagram = "[test]") {
+  
+  if (!requireNamespace("V8")) {stop("Install the V8 package to validate nomnoml code")}
+  
   ct <- V8::v8()
   ct$source(system.file("htmlwidgets/lib-raw/graphre.js", package = "nomnoml", mustWork = TRUE))
   ct$source(system.file("htmlwidgets/lib-raw/nomnoml.js", package = "nomnoml", mustWork = TRUE))

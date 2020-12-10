@@ -20,10 +20,10 @@ Imports:
     htmlwidgets,
     png,
     webshot,
-    lifecycle,
-    V8
+    lifecycle
 RoxygenNote: 7.1.1
 Suggests:
+    V8,
     knitr,
     rmarkdown,
     testthat,
