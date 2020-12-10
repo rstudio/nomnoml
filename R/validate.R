@@ -19,7 +19,7 @@
 #' @seealso [nomnoml()]
 #'
 #' @examples
-#' nomnoml_validate("[hello]-> [world]")
+#' if (require(V8)) nomnoml_validate("[hello]-> [world]")
 nomnoml_validate <- function(diagram = "[test]") {
   
   if (!requireNamespace("V8")) {stop("Install the V8 package to validate nomnoml code")}
