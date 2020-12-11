@@ -11,3 +11,5 @@
 ^codecov\.yml$
 man-roxygen
 ^cran-comments\.md$
+^CRAN-RELEASE$
+vignettes_not_cran

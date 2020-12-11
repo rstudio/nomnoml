@@ -25,7 +25,7 @@ string and have \code{'px'} appended.}
 is useful if you want to save an expression in a variable.}
 }
 \description{
-\lifecycle{maturing}
+\lifecycle{experimental}
 
 Output and render functions for using nomnoml within Shiny
 applications and interactive Rmd documents.
