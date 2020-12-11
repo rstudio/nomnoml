@@ -13,7 +13,7 @@ nomnoml_validate(diagram = "[test]")
 Either TRUE or FALSE
 }
 \description{
-\lifecycle{experimental}
+\ifelse{html}{\out{<a href='https://www.tidyverse.org/lifecycle/#experimental'><img src='figures/lifecycle-experimental.svg' alt='Experimental lifecycle'></a>}}{\strong{Experimental}}
 
 Although the \code{nomnoml} widgets render very quickly in the IDE, it can take a
 few seconds to grab a static screenshot and create a \code{png} file.  In these

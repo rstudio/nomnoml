@@ -28,7 +28,7 @@ nomnoml(
 \item{...}{Additional parameters.}
 }
 \description{
-\lifecycle{experimental}
+\ifelse{html}{\out{<a href='https://www.tidyverse.org/lifecycle/#experimental'><img src='figures/lifecycle-experimental.svg' alt='Experimental lifecycle'></a>}}{\strong{Experimental}}
 
 Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 as a 'png' image.

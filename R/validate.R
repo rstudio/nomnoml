@@ -2,7 +2,7 @@
 #' 
 #' @description 
 #' 
-#' \lifecycle{experimental}
+#' `r lifecycle::badge("experimental")`
 #' 
 #' Although the `nomnoml` widgets render very quickly in the IDE, it can take a
 #' few seconds to grab a static screenshot and create a `png` file.  In these

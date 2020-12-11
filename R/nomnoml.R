@@ -2,7 +2,7 @@
 #'
 #' @description 
 #' 
-#' \lifecycle{experimental}
+#' `r lifecycle::badge("experimental")`
 #' 
 #' Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 #' as a 'png' image.
@@ -108,7 +108,7 @@ nomnoml <- function(
 #' 
 #' @description 
 #' 
-#' \lifecycle{experimental}
+#' `r lifecycle::badge("experimental")`
 #'
 #' Output and render functions for using nomnoml within Shiny
 #' applications and interactive Rmd documents.
