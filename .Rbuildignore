@@ -10,3 +10,4 @@
 ^\.github$
 ^codecov\.yml$
 man-roxygen
+^cran-comments\.md$
