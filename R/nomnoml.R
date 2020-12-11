@@ -69,7 +69,7 @@ nomnoml <- function(
   ...) {
   
   if (!webshot::is_phantomjs_installed()) {
-    error("You must install phantomjs using webshot::install_phantomjs()")
+    stop("You must install phantomjs using webshot::install_phantomjs()")
   }
   
   # forward options using x
