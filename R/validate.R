@@ -27,8 +27,19 @@ nomnoml_validate <- function(diagram = "[test]") {
   if (!requireNamespace("V8", quietly = TRUE)) {stop("Install the V8 package to validate nomnoml code")}
   
   ct <- V8::v8()
-  ct$source(system.file("htmlwidgets/lib-raw/graphre.js", package = "nomnoml", mustWork = TRUE))
-  ct$source(system.file("htmlwidgets/lib-raw/nomnoml.js", package = "nomnoml", mustWork = TRUE))
+  
+  v8_version <- as.numeric(gsub("\\..*", "", V8::engine_info()$version))
+  
+  # it's not clear where exactly the break happens, but my local install of
+  # windows has v8 version 6, and the linux server has V8 version 8
+  
+  if (v8_version <= 6) {
+    ct$source(system.file("htmlwidgets/lib-raw/graphre.js", package = "nomnoml", mustWork = TRUE))
+    ct$source(system.file("htmlwidgets/lib-raw/nomnoml.js", package = "nomnoml", mustWork = TRUE))
+  } else {
+    ct$source(system.file("htmlwidgets/lib/graphre/graphre.js", package = "nomnoml", mustWork = TRUE))
+    ct$source(system.file("htmlwidgets/lib/nomnoml/nomnoml.js", package = "nomnoml", mustWork = TRUE))
+  }
   
   ct$assign("diagram", diagram)
   
