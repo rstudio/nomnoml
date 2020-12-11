@@ -32,7 +32,6 @@ Suggests:
     spelling
 URL: https://github.com/rstudio/nomnoml
 BugReports: https://github.com/rstudio/nomnoml/issues
-VignetteBuilder: knitr
 Roxygen: list(markdown = TRUE)
 RdMacros: lifecycle
 Language: en-US
