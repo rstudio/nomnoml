@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • nomnoml</title>
+<title>Use the V8 JavaScript engine to validate a nomnoml diagram. — nomnoml_validate • nomnoml</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,7 +46,14 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Use the V8 JavaScript engine to validate a nomnoml diagram. — nomnoml_validate" />
+<meta property="og:description" content="
+Although the nomnoml widgets render very quickly in the IDE, it can take a
+few seconds to grab a static screenshot and create a png file.  In these
+situations it can be helpful to validate if the nomnoml JS library can
+parse a diagram.
+This function returns TRUE if a diagram can be parsed, and FALSE
+otherwise.  If FALSE the function also throws a warning." />
 <meta property="og:image" content="/logo.svg" />
 
 
@@ -66,7 +73,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -128,60 +135,47 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Use the <code>V8</code> JavaScript engine to validate a <code>nomnoml</code> diagram.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/rstudio/nomnoml/blob/master/R/validate.R'><code>R/validate.R</code></a></small>
+    <div class="hidden name"><code>nomnoml_validate.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p><a href='https://www.tidyverse.org/lifecycle/#experimental'><img src='figures/lifecycle-experimental.svg' alt='Experimental lifecycle'></a></p>
+<p>Although the <code>nomnoml</code> widgets render very quickly in the IDE, it can take a
+few seconds to grab a static screenshot and create a <code>png</code> file.  In these
+situations it can be helpful to validate if the <code>nomnoml</code> JS library can
+parse a diagram.</p>
+<p>This function returns <code>TRUE</code> if a diagram can be parsed, and <code>FALSE</code>
+otherwise.  If <code>FALSE</code> the function also throws a warning.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>nomnoml_validate</span><span class='op'>(</span>diagram <span class='op'>=</span> <span class='st'>"[test]"</span><span class='op'>)</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="nomnoml-shiny.html">nomnomlOutput()</a></code> <code><a href="nomnoml-shiny.html">renderNomnoml()</a></code> </p>
-        </td>
-        <td><p>Shiny bindings for nomnoml.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nomnoml.html">nomnoml()</a></code> </p>
-        </td>
-        <td><p>Render nomnoml diagram.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nomnoml_syntax.html">nomnoml_syntax</a></code> </p>
-        </td>
-        <td><p>nomnoml_syntax</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nomnoml_validate.html">nomnoml_validate()</a></code> </p>
-        </td>
-        <td><p>Use the <code>V8</code> JavaScript engine to validate a <code>nomnoml</code> diagram.</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>diagram</th>
+      <td><p>A <code>nomnoml</code> diagram to validate</p></td>
+    </tr>
     </table>
-  </div>
 
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>Either TRUE or FALSE</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p><code><a href='nomnoml.html'>nomnoml()</a></code></p></div>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/ns-load.html'>requireNamespace</a></span><span class='op'>(</span><span class='st'>"V8"</span>, quietly <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'>nomnoml_validate</span><span class='op'>(</span><span class='st'>"[hello] -&gt; [world]"</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>
