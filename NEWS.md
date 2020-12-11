@@ -6,6 +6,8 @@
 
 - Add `pkgdown` documentation site
 
+- Add `nomnoml_validate()`, an experimental function to validate if a diagram can be parsed.  Uses the `V8` package to do this.
+
 
 # nomnoml 0.2.1 (2020-12-04)
 

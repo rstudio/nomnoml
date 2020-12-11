@@ -75,5 +75,5 @@ nomnoml::nomnoml("
 
 }
 \seealso{
-\code{\link[=nomnomlOutput]{nomnomlOutput()}}, \code{\link[=renderNomnoml]{renderNomnoml()}}
+\code{\link[=nomnomlOutput]{nomnomlOutput()}}, \code{\link[=renderNomnoml]{renderNomnoml()}}, \code{\link[=nomnoml_validate]{nomnoml_validate()}}
 }

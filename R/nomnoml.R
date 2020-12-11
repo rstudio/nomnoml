@@ -57,7 +57,7 @@
 #'
 #' @import htmlwidgets
 #' 
-#' @seealso [nomnomlOutput()], [renderNomnoml()]
+#' @seealso [nomnomlOutput()], [renderNomnoml()], [nomnoml_validate()]
 #' 
 #' @export
 nomnoml <- function(
