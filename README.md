@@ -87,7 +87,7 @@ options
 
 ### Advanced
 
-Notice that much more complex diagrams can be designed using ‘nomnoml’
+Notice that much more complex diagrams can be designed using `nomnoml`
 by combining association types, classifier types, directives and custom
 classifier styles.
 
@@ -206,8 +206,3 @@ Available modifiers are
     italic
     dashed
     empty
-
-## Contributing
-
-Please refer to
-[github.com/skanaar/nomnoml](https://github.com/skanaar/nomnoml).
