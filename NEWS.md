@@ -1,4 +1,4 @@
-# nomnoml 0.2.1.9000
+# nomnoml 0.2.2 (2020-12-11)
 
 - Update `nomnoml` to v1.3.1 (taking dependency on `graphre`)
 
@@ -7,6 +7,8 @@
 - Add `pkgdown` documentation site
 
 - Add `nomnoml_validate()`, an experimental function to validate if a diagram can be parsed.  Uses the `V8` package to do this.
+
+- Added "experimental badge" to package
 
 
 # nomnoml 0.2.1 (2020-12-04)
