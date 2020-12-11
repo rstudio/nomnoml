@@ -68,9 +68,8 @@ nomnoml <- function(
   svg = FALSE,
   ...) {
   
-  if (!svg && !webshot::is_phantomjs_installed()) {
-    message("Installing phantomjs to capture png images")
-    webshot::install_phantomjs()
+  if (!webshot::is_phantomjs_installed()) {
+    error("You must install phantomjs using webshot::install_phantomjs()")
   }
   
   # forward options using x
@@ -109,7 +108,7 @@ nomnoml <- function(
 #' 
 #' @description 
 #' 
-#' \lifecycle{maturing}
+#' \lifecycle{experimental}
 #'
 #' Output and render functions for using nomnoml within Shiny
 #' applications and interactive Rmd documents.
