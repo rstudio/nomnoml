@@ -19,7 +19,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Sassy UML Diagrams">
 <meta property="og:description" content="A tool for drawing sassy UML diagrams based on a simple syntax,
-  see &lt;http://www.nomnoml.com&gt;. Supports styling, R Markdown and exporting diagrams 
+  see &lt;https://www.nomnoml.com&gt;. Supports styling, R Markdown and exporting diagrams 
   in the PNG format.">
 <meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -40,7 +40,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">nomnoml</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.1.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2</span>
       </span>
     </div>
 
@@ -96,7 +96,7 @@
 </h1></div>
 <!-- badges: start -->
 
-<p><strong>nomnoml</strong> provides an R interface to <a href="http://www.nomnoml.com/">nomnoml</a>, a tool for drawing sassy UML diagrams based on syntax with customizable styling.</p>
+<p><strong>nomnoml</strong> provides an R interface to <a href="https://www.nomnoml.com/">nomnoml</a>, a tool for drawing sassy UML diagrams based on syntax with customizable styling.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -112,7 +112,7 @@
 <p>You can create your first diagram by running:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>nomnoml<span class="op">::</span><span class="kw">nomnoml</span>(<span class="st">"[Hello]-[World!]"</span>)</span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-simple-1.png"><!-- --></p>
-<p>To make the diagram flow vertically, the default at <a href="http://www.nomnoml.com/">nomnoml.com</a>, add the <a href="https://github.com/rstudio/nomnoml/issues/5">direction</a> directive:</p>
+<p>To make the diagram flow vertically, the default at <a href="https://www.nomnoml.com/">nomnoml.com</a>, add the <a href="https://github.com/rstudio/nomnoml/issues/5">direction</a> directive:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">#direction: down</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>[Hello]<span class="op">-</span>[World<span class="op">!</span>]</span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-vertical-2.png"><!-- --></p>
@@ -299,8 +299,7 @@
 <ul class="list-unstyled">
 <li>Andrie de Vries <br><small class="roles"> Author, maintainer </small>  </li>
 <li>Javier Luraschi <br><small class="roles"> Author </small>  </li>
-<li>Daniel Kallin <br><small class="roles"> Author </small>  <br><small>(nomnoml.js library, http://nomnoml.com)</small>
-</li>
+<li> RStudio <br><small class="roles"> Copyright holder, funder </small>  </li>
 <li><a href="authors.html">All authors...</a></li>
 </ul>
 </div>
@@ -320,7 +319,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Andrie de Vries, Javier Luraschi, Daniel Kallin.</p>
+  <p>Developed by Andrie de Vries, Javier Luraschi,  RStudio.</p>
 </div>
 
 <div class="pkgdown">
