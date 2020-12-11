@@ -5,11 +5,11 @@ Version: 0.2.1.9000
 Authors@R: c(
     person("Andrie", "de Vries", email = "apdevries@gmail.com", role = c("aut", "cre")),
     person("Javier", "Luraschi", email = "jluraschi@gmail.com", role = "aut"),
-    person("Daniel", "Kallin", role = "aut", comment = "nomnoml.js library, http://nomnoml.com"),
-    person(family = "RStudio", role = "cph")
+    person("Daniel", "Kallin", role = "cph", comment = "nomnoml.js library, https://nomnoml.com"),
+    person(family = "RStudio", role = c("cph", "fnd"))
     )
 Description: A tool for drawing sassy 'UML' diagrams based on a simple syntax,
-  see <http://www.nomnoml.com>. Supports styling, R Markdown and exporting diagrams 
+  see <https://www.nomnoml.com>. Supports styling, R Markdown and exporting diagrams 
   in the PNG format.
 License: MIT + file LICENSE
 Encoding: UTF-8

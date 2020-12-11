@@ -14,7 +14,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 **nomnoml** provides an R interface to
-[nomnoml](http://www.nomnoml.com/), a tool for drawing sassy UML
+[nomnoml](https://www.nomnoml.com/), a tool for drawing sassy UML
 diagrams based on syntax with customizable styling.
 
 ## Installation
@@ -37,7 +37,7 @@ You can create your first diagram by running:
 ![](man/figures/readme/nomnoml-simple-1.png)<!-- -->
 
 To make the diagram flow vertically, the default at
-[nomnoml.com](http://www.nomnoml.com/), add the
+[nomnoml.com](https://www.nomnoml.com/), add the
 [direction](https://github.com/rstudio/nomnoml/issues/5) directive:
 
     #direction: down
