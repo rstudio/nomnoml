@@ -10,7 +10,7 @@ status](https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg)](htt
 [![Codecov test
 coverage](https://codecov.io/gh/rstudio/nomnoml/branch/master/graph/badge.svg)](https://codecov.io/gh/rstudio/nomnoml?branch=master)
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
 
 **nomnoml** provides an R interface to

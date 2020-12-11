@@ -2,7 +2,7 @@
 #'
 #' @description 
 #' 
-#' \lifecycle{maturing}
+#' \lifecycle{experimental}
 #' 
 #' Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 #' as a 'png' image.
