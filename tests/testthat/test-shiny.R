@@ -7,9 +7,13 @@ test_that("shiny", {
 
   skip_on_cran()
   
-  # Only run the tests for code coverage on Github Actions
-  # skip_if_not(identical(Sys.getenv("R_COVR"), "true"), message = "Only test for coverage on github actions")
   
+  # Only run the tests for code coverage on Github Actions
+  
+  if (testthat:::on_ci()) {
+    skip_on_os("windows")
+  }
+
   # Use compareImages=FALSE because the expected image screenshots were created
   # on a Mac, and they will differ from screenshots taken on the CI platform,
   # which runs on Linux.
