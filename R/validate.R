@@ -28,7 +28,7 @@ nomnoml_validate <- function(diagram = "[test]") {
   
   ct <- V8::v8()
   
-  v8_version <- as.numeric(gsub("\\..*", "", V8::engine_info()$version))
+  v8_version <- numeric_version(V8::engine_info()$version)
   
   # it's not clear where exactly the break happens, but my local install of
   # windows has v8 version 6, and the linux server has V8 version 8
