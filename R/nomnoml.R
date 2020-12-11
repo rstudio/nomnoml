@@ -68,6 +68,11 @@ nomnoml <- function(
   svg = FALSE,
   ...) {
   
+  if (!svg && !webshot::is_phantomjs_installed()) {
+    message("Installing phantomjs to capture png images")
+    webshot::install_phantomjs()
+  }
+  
   # forward options using x
   x <- list(
     code = paste(
