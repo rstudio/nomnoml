@@ -38,6 +38,14 @@ install.packages("remotes")
 remotes::install_github("rstudio/nomnoml")
 ```
 
+To use `nomnoml` in an R Markdown document, you also need to make sure the external dependency on PhantomJS is available. You may either download PhantomJS from its website, or use the function `webshot::install_phantomjs()` to install it automatically.
+
+```r
+install.packages("webshot")
+webshot::install_phantomjs()
+```
+
+
 ## Getting Started
 
 You can create your first diagram by running:

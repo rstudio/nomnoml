@@ -30,6 +30,7 @@ Suggests:
     shinytest,
     covr,
     spelling
+SystemRequirements: PhantomJS (http://phantomjs.org) for taking screenshots
 URL: https://github.com/rstudio/nomnoml
 BugReports: https://github.com/rstudio/nomnoml/issues
 Roxygen: list(markdown = TRUE)
