@@ -36,3 +36,4 @@ BugReports: https://github.com/rstudio/nomnoml/issues
 Roxygen: list(markdown = TRUE)
 RdMacros: lifecycle
 Language: en-US
+Config/testthat/edition: 3

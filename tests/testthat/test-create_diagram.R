@@ -1,5 +1,5 @@
 test_that("create diagrams", {
-  expect_is(
+  expect_s3_class(
     nomnoml(""),
     "htmlwidget"
   )
