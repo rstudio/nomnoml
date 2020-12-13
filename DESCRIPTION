@@ -20,7 +20,8 @@ Imports:
     htmlwidgets,
     png,
     webshot,
-    lifecycle
+    lifecycle,
+    rlang
 RoxygenNote: 7.1.1
 Suggests:
     V8,
