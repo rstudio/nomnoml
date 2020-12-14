@@ -1,3 +1,9 @@
+# nomnoml 0.2.3 (2020-12-14)
+
+- Fix CRAN check failures, specifically relaxing the requirement for phantomjs.
+
+- PhantomJS is only necessary for creating PNG files, including PNG output in R Markdown, but not for SVG output or any interactive widgets, e.g. in a shiny app.
+
 # nomnoml 0.2.2 (2020-12-11)
 
 - Update `nomnoml` to v1.3.1 (taking dependency on `graphre`)

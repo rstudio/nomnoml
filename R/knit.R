@@ -76,6 +76,7 @@ knit_nomnoml <- function (options) {
     widget
   }
   else if (fixed_image) {
+    stop_if_no_phantomjs()
     file <- tempfile(fileext = ".html")
     png <- tempfile(fileext = ".png")
     

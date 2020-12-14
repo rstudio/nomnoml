@@ -1,3 +1,9 @@
+stop_if_no_phantomjs <- function() {
+  if (!webshot::is_phantomjs_installed()) {
+    stop("You must install phantomjs using webshot::install_phantomjs()")
+  }
+}
+
 #' Render nomnoml diagram.
 #'
 #' @description 
@@ -68,9 +74,6 @@ nomnoml <- function(
   svg = FALSE,
   ...) {
   
-  if (!webshot::is_phantomjs_installed()) {
-    stop("You must install phantomjs using webshot::install_phantomjs()")
-  }
   
   # forward options using x
   x <- list(
@@ -93,6 +96,8 @@ nomnoml <- function(
   
   if (!is.null(png)) {
     if (svg) stop("Parameter 'svg' must be false when creating PNGs.")
+    
+    stop_if_no_phantomjs()
     
     file <- tempfile(fileext = ".html")
     htmlwidgets::saveWidget(widget, file)

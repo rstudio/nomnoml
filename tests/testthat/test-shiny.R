@@ -6,7 +6,7 @@ test_that("shiny", {
   # recordTest("inst/examples/shiny")
 
   skip_on_cran()
-  
+  testthat::skip_if_not(webshot::is_phantomjs_installed())
   
   # Only run the tests for code coverage on Github Actions
   
