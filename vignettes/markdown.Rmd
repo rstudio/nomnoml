@@ -1,0 +1,81 @@
+---
+title: "Using nomnoml in R markdown"
+output: 
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Using nomnoml in R markdown}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(nomnoml)
+```
+
+
+You can also use `nomnoml` chunks in R Markdown.  Here is an example R Markdown, including the yaml header.  Notice that you can use `{nomnoml}` chunks and these will be rendered by the `nomnoml` engine.
+
+````markdown
+---
+title: "A Diagram"
+output: html_document
+---
+
+`r ''````{r, setup, include=FALSE}
+library(nomnoml)
+```
+
+`r ''````{nomnoml}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
+
+[A]-[B]
+[B]-[<box>C]
+```
+````
+
+## Chunk examples
+
+Here is a rendered example of a chunk, using the default plot size:
+
+
+```{nomnoml, svg=TRUE}
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
+
+
+And the same diagram, this time with specified size:
+
+
+```{nomnoml, svg=TRUE, width="2in", height="2in"}
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
+
+
+
+
