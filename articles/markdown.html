@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>markdown • nomnoml</title>
+<title>Using nomnoml in R markdown • nomnoml</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
@@ -17,7 +17,7 @@
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="markdown">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Using nomnoml in R markdown">
 <meta property="og:description" content="nomnoml">
 <meta property="og:image" content="/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -38,7 +38,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">nomnoml</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.2</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.3</span>
       </span>
     </div>
 
@@ -46,7 +46,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -61,7 +61,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/markdown.html">markdown</a>
+      <a href="../articles/markdown.html">Using nomnoml in R markdown</a>
     </li>
   </ul>
 </li>
@@ -72,7 +72,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/rstudio/nomnoml/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -86,11 +86,10 @@
 
       
 
-      </header><script src="markdown_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="markdown_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
-<script src="markdown_files/anchor-sections-1.0/anchor-sections.js"></script><script src="markdown_files/htmlwidgets-1.5.3/htmlwidgets.js"></script><script src="markdown_files/es6shim-0.35.6/es6shim.js"></script><script src="markdown_files/es7shim-6.0.0/es7shim.js"></script><script src="markdown_files/graphre-0.1.3/graphre.js"></script><script src="markdown_files/nomnoml-1.3.1/nomnoml.js"></script><script src="markdown_files/nomnoml-binding-0.2.2/nomnoml.js"></script><div class="row">
+      </header><script src="markdown_files/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="markdown_files/htmlwidgets-1.5.3/htmlwidgets.js"></script><script src="markdown_files/es6shim-0.35.6/es6shim.js"></script><script src="markdown_files/es7shim-6.0.0/es7shim.js"></script><script src="markdown_files/graphre-0.1.3/graphre.js"></script><script src="markdown_files/nomnoml-1.3.1/nomnoml.js"></script><script src="markdown_files/nomnoml-binding-0.2.3/nomnoml.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>markdown</h1>
+      <h1 data-toc-skip>Using nomnoml in R markdown</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/rstudio/nomnoml/blob/master/vignettes/markdown.Rmd"><code>vignettes/markdown.Rmd</code></a></small>
@@ -102,6 +101,27 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/nomnoml">nomnoml</a></span><span class="op">)</span></code></pre></div>
+<p>You can also use <code>nomnoml</code> chunks in R Markdown. Here is an example R Markdown, including the yaml header. Notice that you can use <a href="https://github.com/rstudio/nomnoml">nomnoml</a> chunks and these will be rendered by the <code>nomnoml</code> engine.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>---</span>
+<span id="cb2-2"><a href="#cb2-2"></a>title: "A Diagram"</span>
+<span id="cb2-3"><a href="#cb2-3"></a>output: html_document</span>
+<span id="cb2-4"><a href="#cb2-4"></a>---</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="bn">```{r, setup, include=FALSE}</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="bn">library(nomnoml)</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="bn">```</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="bn">```{nomnoml}</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="bn">#stroke: orange</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="bn">#.box: fill=#8f8 dashed visual=ellipse</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="bn">[A]-[B]</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="bn">[B]-[&lt;box&gt;C]</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="bn">```</span></span></code></pre></div>
+<div id="chunk-examples" class="section level2">
+<h2 class="hasAnchor">
+<a href="#chunk-examples" class="anchor"></a>Chunk examples</h2>
+<p>Here is a rendered example of a chunk, using the default plot size:</p>
 <pre class="nomnoml"><code>#stroke: #a86128
 #direction: down
 [&lt;frame&gt;Decorator pattern|
@@ -112,8 +132,9 @@
   [Component] &lt;:- [Decorator]
   [Component] &lt;:- [ConcreteComponent]
 ]</code></pre>
-<div id="htmlwidget-ee6be13222d3c7194e09" style="width:2in;height:2in;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ee6be13222d3c7194e09">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false},"evals":[],"jsHooks":[]}</script><pre class="nomnoml"><code>#stroke: #a86128
+<div id="htmlwidget-9c00dd8ca92790480ce3" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9c00dd8ca92790480ce3">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false},"evals":[],"jsHooks":[]}</script><p>And the same diagram, this time with specified size:</p>
+<pre class="nomnoml"><code>#stroke: #a86128
 #direction: down
 [&lt;frame&gt;Decorator pattern|
   [&lt;abstract&gt;Component||+ operation()]
@@ -123,23 +144,16 @@
   [Component] &lt;:- [Decorator]
   [Component] &lt;:- [ConcreteComponent]
 ]</code></pre>
-<div id="htmlwidget-debad94946e3a2c2bc76" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-debad94946e3a2c2bc76">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false},"evals":[],"jsHooks":[]}</script><pre class="nomnoml"><code>#stroke: #a86128
-#direction: down
-[&lt;frame&gt;Decorator pattern|
-  [&lt;abstract&gt;Component||+ operation()]
-  [Client] depends --&gt; [Component]
-  [Decorator|- next: Component]
-  [Decorator] decorates -- [ConcreteComponent]
-  [Component] &lt;:- [Decorator]
-  [Component] &lt;:- [ConcreteComponent]
-]</code></pre>
-<p><img src="markdown_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
+<div id="htmlwidget-d2db23781acb1742e8ee" style="width:2in;height:2in;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d2db23781acb1742e8ee">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false},"evals":[],"jsHooks":[]}</script>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
