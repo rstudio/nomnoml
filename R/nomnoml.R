@@ -82,7 +82,8 @@ nomnoml <- function(
       code,
       sep = "\n"
     ),
-    svg = svg
+    svg = svg,
+    png = png
   )
   
   # create widget
@@ -96,13 +97,8 @@ nomnoml <- function(
   
   if (!is.null(png)) {
     if (svg) stop("Parameter 'svg' must be false when creating PNGs.")
-    
     stop_if_no_phantomjs()
-    
-    file <- tempfile(fileext = ".html")
-    htmlwidgets::saveWidget(widget, file)
-    
-    webshot::webshot(file, png, selector = "canvas")
+    widget
   }
   else {
     widget
