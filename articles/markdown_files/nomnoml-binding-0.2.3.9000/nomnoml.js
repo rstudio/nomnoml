@@ -5,6 +5,7 @@ HTMLWidgets.widget({
   factory: function(el, width, height) {
     var g = null;
     var svg = null;
+    var png = null;
     var canvas = null;
     var wrapper = null;
     var code = null;
@@ -48,6 +49,7 @@ HTMLWidgets.widget({
     return {
       renderValue: function(x) {
         code = x.code;
+        png  = x.png;
         
         if (x.svg) {
           if (!initialized_svg) {
@@ -80,6 +82,10 @@ HTMLWidgets.widget({
           }
           
           resizeCanvas(width, height);
+          if (png !== null) {
+            canvas = document.getElementsByTagName("canvas")[0];
+            canvas.toDataURL("image/png");
+          }
         }
       },
 
@@ -88,7 +94,9 @@ HTMLWidgets.widget({
           resizeCanvas(width, height);
         else
           resizeSvg(width, height);
-      }
+      },
+      
+      p: "hello world"
     };
   }
 });
