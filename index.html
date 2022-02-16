@@ -28,6 +28,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -40,18 +42,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">nomnoml</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.3</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.3</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -73,7 +69,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/rstudio/nomnoml/">
+  <a href="https://github.com/rstudio/nomnoml/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -90,29 +86,28 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="nomnoml-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#nomnoml-" class="anchor"></a>nomnoml <img src="reference/figures/logo.svg" align="right" height="139">
+<div class="section level1">
+<div class="page-header"><h1 id="nomnoml-">nomnoml <img src="reference/figures/logo.svg" align="right" height="139"><a class="anchor" aria-label="anchor" href="#nomnoml-"></a>
 </h1></div>
 <!-- badges: start -->
 
-<p><strong>nomnoml</strong> provides an R interface to <a href="https://www.nomnoml.com/">nomnoml</a>, a tool for drawing sassy UML diagrams based on syntax with customizable styling.</p>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor"></a>Installation</h2>
+<p><strong>nomnoml</strong> provides an R interface to <a href="https://www.nomnoml.com/" class="external-link">nomnoml</a>, a tool for drawing sassy UML diagrams based on syntax with customizable styling.</p>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <p>Install from CRAN:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">install.packages</span>(<span class="st">"nomnoml"</span>)</span></code></pre></div>
 <p>Or from GitHub using:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">install.packages</span>(<span class="st">"remotes"</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"rstudio/nomnoml"</span>)</span></code></pre></div>
 </div>
-<div id="getting-started" class="section level2">
-<h2 class="hasAnchor">
-<a href="#getting-started" class="anchor"></a>Getting Started</h2>
+<div class="section level2">
+<h2 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h2>
 <p>You can create your first diagram by running:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>nomnoml<span class="op">::</span><span class="kw">nomnoml</span>(<span class="st">"[Hello]-[World!]"</span>)</span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-simple-1.png"><!-- --></p>
-<p>To make the diagram flow vertically, the default at <a href="https://www.nomnoml.com/">nomnoml.com</a>, add the <a href="https://github.com/rstudio/nomnoml/issues/5">direction</a> directive:</p>
+<p>To make the diagram flow vertically, the default at <a href="https://www.nomnoml.com/" class="external-link">nomnoml.com</a>, add the <a href="https://github.com/rstudio/nomnoml/issues/5" class="external-link">direction</a> directive:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co">#direction: down</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>[Hello]<span class="op">-</span>[World<span class="op">!</span>]</span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-vertical-2.png"><!-- --></p>
@@ -134,9 +129,9 @@
 <span id="cb5-15"><a href="#cb5-15"></a><span class="dt">[B]-[&lt;box&gt;C]</span></span>
 <span id="cb5-16"><a href="#cb5-16"></a><span class="st">```</span></span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-multiline-3.png"><!-- --></p>
-<div id="svg" class="section level3">
-<h3 class="hasAnchor">
-<a href="#svg" class="anchor"></a>SVG</h3>
+<div class="section level3">
+<h3 id="svg">SVG<a class="anchor" aria-label="anchor" href="#svg"></a>
+</h3>
 <p>To render using SVG, add <code>svg = TRUE</code></p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">nomnoml</span>(diagram, <span class="dt">svg =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
 <p>To render a <code>nomnoml</code> chunk in R Markdown, add <code>svg=TRUE</code> to the chunk options</p>
@@ -149,9 +144,9 @@
 <span id="cb7-7"><a href="#cb7-7"></a><span class="st">```</span></span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-svg-1.png"><!-- --></p>
 </div>
-<div id="advanced" class="section level3">
-<h3 class="hasAnchor">
-<a href="#advanced" class="anchor"></a>Advanced</h3>
+<div class="section level3">
+<h3 id="advanced">Advanced<a class="anchor" aria-label="anchor" href="#advanced"></a>
+</h3>
 <p>Notice that much more complex diagrams can be designed using <code>nomnoml</code> by combining association types, classifier types, directives and custom classifier styles.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co">#stroke: #a86128</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="co">#direction: down</span></span>
@@ -165,9 +160,9 @@
 <span id="cb8-10"><a href="#cb8-10"></a>]</span></code></pre></div>
 <p><img src="reference/figures/readme/nomnoml-decorator-2.png"><!-- --></p>
 </div>
-<div id="association-types" class="section level3">
-<h3 class="hasAnchor">
-<a href="#association-types" class="anchor"></a>Association types</h3>
+<div class="section level3">
+<h3 id="association-types">Association types<a class="anchor" aria-label="anchor" href="#association-types"></a>
+</h3>
 <div class="sourceCode" id="cb9"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">-</span><span class="st">    </span>association</span>
 <span id="cb9-2"><a href="#cb9-2"></a>-&gt;<span class="st">   </span>association</span>
 <span id="cb9-3"><a href="#cb9-3"></a>&lt;-<span class="er">&gt;</span><span class="st">  </span>association</span>
@@ -184,9 +179,9 @@
 <span id="cb9-14"><a href="#cb9-14"></a><span class="op">--</span><span class="st">   </span>note</span>
 <span id="cb9-15"><a href="#cb9-15"></a><span class="op">-</span><span class="er">/</span><span class="op">-</span><span class="st">  </span>hidden</span></code></pre></div>
 </div>
-<div id="classifier-types" class="section level3">
-<h3 class="hasAnchor">
-<a href="#classifier-types" class="anchor"></a>Classifier types</h3>
+<div class="section level3">
+<h3 id="classifier-types">Classifier types<a class="anchor" aria-label="anchor" href="#classifier-types"></a>
+</h3>
 <div class="sourceCode" id="cb10"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>[name]</span>
 <span id="cb10-2"><a href="#cb10-2"></a>[<span class="op">&lt;</span>abstract<span class="op">&gt;</span><span class="st"> </span>name]</span>
 <span id="cb10-3"><a href="#cb10-3"></a>[<span class="op">&lt;</span>instance<span class="op">&gt;</span><span class="st"> </span>name]</span>
@@ -208,9 +203,9 @@
 <span id="cb10-19"><a href="#cb10-19"></a>[<span class="op">&lt;</span>label<span class="op">&gt;</span><span class="st"> </span>name]</span>
 <span id="cb10-20"><a href="#cb10-20"></a>[<span class="op">&lt;</span>hidden<span class="op">&gt;</span><span class="st"> </span>name]</span></code></pre></div>
 </div>
-<div id="directives" class="section level3">
-<h3 class="hasAnchor">
-<a href="#directives" class="anchor"></a>Directives</h3>
+<div class="section level3">
+<h3 id="directives">Directives<a class="anchor" aria-label="anchor" href="#directives"></a>
+</h3>
 <div class="sourceCode" id="cb11"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co">#arrowSize: 1</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="co">#bendSize: 0.3</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="co">#direction: down | right</span></span>
@@ -231,9 +226,9 @@
 <p>Directives only available when using the command line interface</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">#import: my-common-styles.nomnoml</span></span></code></pre></div>
 </div>
-<div id="custom-classifier-styles" class="section level3">
-<h3 class="hasAnchor">
-<a href="#custom-classifier-styles" class="anchor"></a>Custom classifier styles</h3>
+<div class="section level3">
+<h3 id="custom-classifier-styles">Custom classifier styles<a class="anchor" aria-label="anchor" href="#custom-classifier-styles"></a>
+</h3>
 <p>A directive that starts with “.” define a classifier style.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">#.box: fill=#88ff88</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="co">#.blob: fill=pink visual=ellipse italic bold dashed</span></span>
@@ -271,54 +266,64 @@
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=nomnoml">https://​cloud.r-project.org/​package=nomnoml</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/rstudio/nomnoml/">https://​github.com/​rstudio/​nomnoml/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/rstudio/nomnoml/issues">https://​github.com/​rstudio/​nomnoml/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=nomnoml" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/rstudio/nomnoml/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/rstudio/nomnoml/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
+<a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
 </li>
 </ul>
 </div>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
+<ul class="list-unstyled">
+<li><a href="authors.html#citation">Citing nomnoml</a></li>
+</ul>
+</div>
+
 <div class="developers">
-<h2>Developers</h2>
+<h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
 <li>Andrie de Vries <br><small class="roles"> Author, maintainer </small>  </li>
 <li>Javier Luraschi <br><small class="roles"> Author </small>  </li>
 <li> RStudio <br><small class="roles"> Copyright holder, funder </small>  </li>
-<li><a href="authors.html">All authors...</a></li>
+<li><a href="authors.html">More about authors...</a></li>
 </ul>
 </div>
 
-  <div class="dev-status">
-<h2>Dev status</h2>
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=nomnoml"><img src="https://www.r-pkg.org/badges/version/nomnoml" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://www.r-pkg.org/pkg/nomnoml"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a></li>
-<li><a href="https://github.com/rstudio/nomnoml/actions"><img src="https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://codecov.io/gh/rstudio/nomnoml?branch=master"><img src="https://codecov.io/gh/rstudio/nomnoml/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
-<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://cran.r-project.org/package=nomnoml" class="external-link"><img src="https://www.r-pkg.org/badges/version/nomnoml" alt="CRAN_Status_Badge"></a></li>
+<li><a href="https://www.r-pkg.org/pkg/nomnoml" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a></li>
+<li><a href="https://github.com/rstudio/nomnoml/actions" class="external-link"><img src="https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://codecov.io/gh/rstudio/nomnoml?branch=master" class="external-link"><img src="https://codecov.io/gh/rstudio/nomnoml/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#experimental" class="external-link"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 </ul>
 </div>
-</div>
+
+  </div>
 </div>
 
 
       <footer><div class="copyright">
-  <p>Developed by Andrie de Vries, Javier Luraschi,  RStudio.</p>
+  <p></p>
+<p>Developed by Andrie de Vries, Javier Luraschi, RStudio.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
 </div>
 
       </footer>
@@ -326,6 +331,8 @@
 
   
 
+
+  
 
   </body>
 </html>
