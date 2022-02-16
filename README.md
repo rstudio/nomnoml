@@ -1,14 +1,13 @@
 
-# nomnoml <img src='man/figures/logo.svg' align="right" height="139" />
+# nomnoml <img src='man/figures/logo.png' align="right" height="139" />
 
 <!-- badges: start -->
 
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/nomnoml)](https://cran.r-project.org/package=nomnoml)
+[![R-CMD-check](https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/nomnoml/actions)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nomnoml)](https://cran.r-project.org/package=nomnoml)
 <a href="https://www.r-pkg.org/pkg/nomnoml"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a>
-[![R build
-status](https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/nomnoml/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/rstudio/nomnoml/branch/master/graph/badge.svg)](https://codecov.io/gh/rstudio/nomnoml?branch=master)
+coverage](https://codecov.io/gh/rstudio/nomnoml/branch/main/graph/badge.svg)](https://codecov.io/gh/rstudio/nomnoml?branch=main)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 <!-- badges: end -->
@@ -21,18 +20,34 @@ diagrams based on syntax with customizable styling.
 
 Install from CRAN:
 
-    install.packages("nomnoml")
+``` r
+install.packages("nomnoml")
+```
 
 Or from GitHub using:
 
-    install.packages("remotes")
-    remotes::install_github("rstudio/nomnoml")
+``` r
+install.packages("remotes")
+remotes::install_github("rstudio/nomnoml")
+```
+
+To use `nomnoml` in an R Markdown document, you also need to make sure
+the external dependency on PhantomJS is available. You may either
+download PhantomJS from its website, or use the function
+`webshot::install_phantomjs()` to install it automatically.
+
+``` r
+install.packages("webshot")
+webshot::install_phantomjs()
+```
 
 ## Getting Started
 
 You can create your first diagram by running:
 
-    nomnoml::nomnoml("[Hello]-[World!]")
+``` r
+nomnoml::nomnoml("[Hello]-[World!]")
+```
 
 ![](man/figures/readme/nomnoml-simple-1.png)<!-- -->
 
@@ -40,29 +55,33 @@ To make the diagram flow vertically, the default at
 [nomnoml.com](https://www.nomnoml.com/), add the
 [direction](https://github.com/rstudio/nomnoml/issues/5) directive:
 
-    #direction: down
-    [Hello]-[World!]
+``` nomnoml
+#direction: down
+[Hello]-[World!]
+```
 
 ![](man/figures/readme/nomnoml-vertical-2.png)<!-- -->
 
 You can also use `nomnoml` in R Markdown:
 
-    ---
-    title: "A Diagram"
-    output: html_document
-    ---
+```` markdown
+---
+title: "A Diagram"
+output: html_document
+---
 
-    ```{r, setup, include=FALSE}
-    library(nomnoml)
-    ```
+```{r, setup, include=FALSE}
+library(nomnoml)
+```
 
-    ```{nomnoml}
-    #stroke: orange
-    #.box: fill=#8f8 dashed visual=ellipse
+```{nomnoml}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
 
-    [A]-[B]
-    [B]-[<box>C]
-    ```
+[A]-[B]
+[B]-[<box>C]
+```
+````
 
 ![](man/figures/readme/nomnoml-multiline-3.png)<!-- -->
 
@@ -70,18 +89,22 @@ You can also use `nomnoml` in R Markdown:
 
 To render using SVG, add `svg = TRUE`
 
-    nomnoml(diagram, svg = TRUE)
+``` r
+nomnoml(diagram, svg = TRUE)
+```
 
 To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk
 options
 
-    ```{nomnoml, svg=TRUE}
-    #stroke: orange
-    #.box: fill=#8f8 dashed visual=ellipse
+```` markdown
+```{nomnoml, svg=TRUE}
+#stroke: orange
+#.box: fill=#8f8 dashed visual=ellipse
 
-    [A]-[B]
-    [B]-[<box>C]
-    ```
+[A]-[B]
+[B]-[<box>C]
+```
+````
 
 ![](man/figures/readme/nomnoml-svg-1.png)<!-- -->
 
@@ -91,16 +114,18 @@ Notice that much more complex diagrams can be designed using `nomnoml`
 by combining association types, classifier types, directives and custom
 classifier styles.
 
-    #stroke: #a86128
-    #direction: down
-    [<frame>Decorator pattern|
-      [<abstract>Component||+ operation()]
-      [Client] depends --> [Component]
-      [Decorator|- next: Component]
-      [Decorator] decorates -- [ConcreteComponent]
-      [Component] <:- [Decorator]
-      [Component] <:- [ConcreteComponent]
-    ]
+``` nomnoml
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
 
 ![](man/figures/readme/nomnoml-decorator-2.png)<!-- -->
 
