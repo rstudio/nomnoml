@@ -2,6 +2,16 @@
 
 # nomnoml -----------------------------------------------------------------
 
+
+current_version <- 
+  yaml::read_yaml(system.file("htmlwidgets/nomnoml.yaml", package = "nomnoml")) %>% 
+  .$"dependencies" %>% 
+  purrr::map(~setNames(.$version, .$name)) %>% 
+  unlist() %>% 
+  purrr::pluck("nomnoml")
+
+message("Current nomnoml version: ", current_version)
+
 nomnoml_js <-  
   readLines(
     "https://raw.githubusercontent.com/skanaar/nomnoml/master/dist/nomnoml.js",
