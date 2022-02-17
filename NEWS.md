@@ -1,4 +1,7 @@
-# nomnoml (development version)
+# nomnoml 0.2.4
+
+- Update `nomnoml.js` to version 1.4.0
+
 
 # nomnoml 0.2.3 (2020-12-14)
 
