@@ -1,7 +1,6 @@
 ---
 title: "Using nomnoml with pdf documents"
-output: 
-  rmarkdown::pdf_document
+output: rmarkdown::pdf_document
 vignette: >
   %\VignetteIndexEntry{Using nomnoml with pdf documents}
   %\VignetteEngine{knitr::rmarkdown}
@@ -20,7 +19,7 @@ library(nomnoml)
 ```
 
 
-You can also use `nomnoml` chunks in R Markdown.  Here is an example R Markdown, including the yaml header.  Notice that you can use `{nomnoml}` chunks and these will be rendered by the `nomnoml` engine.
+You can use `nomnoml` chunks in R Markdown with PDF output.  Here is an example R Markdown, including the yaml header.  Notice that you can use `{nomnoml}` chunks and these will be rendered by the `nomnoml` engine.
 
 ````markdown
 ---
@@ -62,4 +61,16 @@ Here is a rendered example of a chunk, using the default plot size:
 
 And the same diagram, this time with specified size:
 
+```{nomnoml, svg=TRUE, width="2in", height="2in"}
+#stroke: #a86128
+#direction: down
+[<frame>Decorator pattern|
+  [<abstract>Component||+ operation()]
+  [Client] depends --> [Component]
+  [Decorator|- next: Component]
+  [Decorator] decorates -- [ConcreteComponent]
+  [Component] <:- [Decorator]
+  [Component] <:- [ConcreteComponent]
+]
+```
 

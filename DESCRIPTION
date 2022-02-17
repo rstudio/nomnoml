@@ -38,3 +38,4 @@ Roxygen: list(markdown = TRUE)
 RdMacros: lifecycle
 Language: en-US
 Config/testthat/edition: 3
+VignetteBuilder: knitr
