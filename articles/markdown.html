@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">nomnoml</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.3.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.4</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -76,7 +76,7 @@
 
 
 
-<script src="markdown_files/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="markdown_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="markdown_files/es6shim-0.35.6/es6shim.js"></script><script src="markdown_files/es7shim-6.0.0/es7shim.js"></script><script src="markdown_files/graphre-0.1.3/graphre.js"></script><script src="markdown_files/nomnoml-1.3.1/nomnoml.js"></script><script src="markdown_files/nomnoml-binding-0.2.3.9000/nomnoml.js"></script><div class="row">
+<script src="markdown_files/accessible-code-block-0.0.1/empty-anchor.js"></script><script src="markdown_files/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="markdown_files/es6shim-0.35.6/es6shim.js"></script><script src="markdown_files/es7shim-6.0.0/es7shim.js"></script><script src="markdown_files/graphre-0.1.3/graphre.js"></script><script src="markdown_files/nomnoml-1.4.0/nomnoml.js"></script><script src="markdown_files/nomnoml-binding-0.2.4/nomnoml.js"></script><div class="row">
   <main id="main"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Using nomnoml in R markdown</h1>
             
@@ -89,7 +89,7 @@
     
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/rstudio/nomnoml" class="external-link">nomnoml</a></span><span class="op">)</span></code></pre></div>
-<p>You can also use <code>nomnoml</code> chunks in R Markdown. Here is an example R Markdown, including the yaml header. Notice that you can use <a href="https://github.com/rstudio/nomnoml" class="external-link">nomnoml</a> chunks and these will be rendered by the <code>nomnoml</code> engine.</p>
+<p>You can use <code>nomnoml</code> chunks in R Markdown with HTML output. Here is an example R Markdown, including the yaml header. Notice that you can use <a href="https://github.com/rstudio/nomnoml" class="external-link">nomnoml</a> chunks and these will be rendered by the <code>nomnoml</code> engine.</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>---</span>
 <span id="cb2-2"><a href="#cb2-2"></a>title: "A Diagram"</span>
 <span id="cb2-3"><a href="#cb2-3"></a>output: html_document</span>
@@ -120,8 +120,8 @@
   [Component] &lt;:- [Decorator]
   [Component] &lt;:- [ConcreteComponent]
 ]</code></pre>
-<div id="htmlwidget-e4e787c833cf9f41f889" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e4e787c833cf9f41f889">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><p>And the same diagram, this time with specified size:</p>
+<div id="htmlwidget-a62b2a0358f1d1a64cb8" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a62b2a0358f1d1a64cb8">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><p>And the same diagram, this time with specified size:</p>
 <pre class="nomnoml"><code>#stroke: #a86128
 #direction: down
 [&lt;frame&gt;Decorator pattern|
@@ -132,8 +132,8 @@
   [Component] &lt;:- [Decorator]
   [Component] &lt;:- [ConcreteComponent]
 ]</code></pre>
-<div id="htmlwidget-20550018b40e5287d115" style="width:2in;height:2in;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-20550018b40e5287d115">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-0a752de9f5bd8c16e373" style="width:2in;height:2in;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0a752de9f5bd8c16e373">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 </div>
   </main>
 </div>
