@@ -7,9 +7,9 @@
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nomnoml)](https://cran.r-project.org/package=nomnoml)
 <a href="https://www.r-pkg.org/pkg/nomnoml"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a>
 [![Codecov test
-coverage](https://codecov.io/gh/rstudio/nomnoml/branch/main/graph/badge.svg)](https://codecov.io/gh/rstudio/nomnoml?branch=main)
+coverage](https://codecov.io/gh/rstudio/nomnoml/branch/main/graph/badge.svg)](https://app.codecov.io/gh/rstudio/nomnoml?branch=main)
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
 <!-- badges: end -->
 
 **nomnoml** provides an R interface to
