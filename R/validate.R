@@ -19,8 +19,9 @@
 #' @seealso [nomnoml()]
 #'
 #' @examples
-#' 
+#' \dontrun{
 #' if (requireNamespace("V8", quietly = TRUE)) nomnoml_validate("[hello] -> [world]")
+#' }
 #' 
 nomnoml_validate <- function(diagram = "[test]") {
   
