@@ -13,7 +13,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <!-- badges: end -->
 
 **nomnoml** provides an R interface to
-[nomnoml](https://www.nomnoml.com/), a tool for drawing sassy UML
+[nomnoml.js](https://www.nomnoml.com/), a tool for drawing sassy UML
 diagrams based on syntax with customizable styling.
 
 ## Installation
