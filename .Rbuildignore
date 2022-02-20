@@ -16,3 +16,4 @@ vignettes_not_cran
 ^revdep$
 ^doc$
 ^Meta$
+^CRAN-SUBMISSION$
