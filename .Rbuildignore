@@ -17,3 +17,4 @@ vignettes_not_cran
 ^doc$
 ^Meta$
 ^CRAN-SUBMISSION$
+^vignettes/*
