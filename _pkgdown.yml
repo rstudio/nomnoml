@@ -2,3 +2,16 @@ url: ~
 template:
   bootstrap: 5
 
+reference:
+- title: "Creating nomnoml diagrams"
+  desc: >
+    Functions to create nomnoml diagrams
+  contents: 
+  - nomnoml
+  - nomnoml_syntax
+  - nomnoml_validate
+- title: "Using nomnoml in shiny apps"
+  desc: "Shiny bindings"
+  contents:
+  - nomnomlOutput
+  - renderNomnoml

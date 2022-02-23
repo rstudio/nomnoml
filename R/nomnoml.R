@@ -4,21 +4,26 @@ stop_if_no_phantomjs <- function() {
   }
 }
 
-#' Render nomnoml diagram.
+#' Create and render a nomnoml diagram.
 #'
 #' @description 
 #' 
 #' `r lifecycle::badge("experimental")`
 #' 
 #' Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
-#' as a 'png' image.
+#' as a '.png' or '.svg' image.
 #' 
 #' @param code The nomnoml diagram code.
+#' 
 #' @param png Optional file name to export diagram as 'png'.
+#' 
 #' @param width Optional width in pixels for the exported 'png'.
+#' 
 #' @param height Optional height in pixels for the exported 'png'.
+#' 
 #' @param svg Use 'svg' output instead of 'png'? Notice that rendering in
 #'   'svg' is not at a par with 'png' and renders incorrectly at times.
+#'   
 #' @param ... Additional parameters.
 #' 
 #' 
@@ -63,7 +68,7 @@ stop_if_no_phantomjs <- function() {
 #'
 #' @import htmlwidgets
 #' 
-#' @seealso [nomnomlOutput()], [renderNomnoml()], [nomnoml_validate()]
+#' @seealso [nomnomlOutput()], [renderNomnoml()], [nomnoml_validate()], [nomnoml_syntax()]
 #' 
 #' @export
 nomnoml <- function(
@@ -115,11 +120,15 @@ nomnoml <- function(
 #' applications and interactive Rmd documents.
 #'
 #' @param outputId output variable to read from
+#' 
 #' @param width,height Must be a valid CSS unit (like `'100%'`,
 #'   `'400px'`, `'auto'`) or a number, which will be coerced to a
 #'   string and have `'px'` appended.
+#'   
 #' @param expr An expression that generates a nomnoml
+#' 
 #' @param env The environment in which to evaluate `expr`.
+#' 
 #' @param quoted Is `expr` a quoted expression (with `quote()`)? This
 #'   is useful if you want to save an expression in a variable.
 #'

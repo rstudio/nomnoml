@@ -2,7 +2,7 @@
 % Please edit documentation in R/nomnoml.R
 \name{nomnoml}
 \alias{nomnoml}
-\title{Render nomnoml diagram.}
+\title{Create and render a nomnoml diagram.}
 \usage{
 nomnoml(
   code = "[Hello]-[World!]",
@@ -31,7 +31,7 @@ nomnoml(
 \ifelse{html}{\href{https://lifecycle.r-lib.org/articles/stages.html#experimental}{\figure{lifecycle-experimental.svg}{options: alt='[Experimental]'}}}{\strong{[Experimental]}}
 
 Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
-as a 'png' image.
+as a '.png' or '.svg' image.
 }
 \details{
 The 'nomnoml' syntax is simple and intuitive, a "Hello World"
@@ -75,5 +75,5 @@ nomnoml::nomnoml("
 
 }
 \seealso{
-\code{\link[=nomnomlOutput]{nomnomlOutput()}}, \code{\link[=renderNomnoml]{renderNomnoml()}}, \code{\link[=nomnoml_validate]{nomnoml_validate()}}
+\code{\link[=nomnomlOutput]{nomnomlOutput()}}, \code{\link[=renderNomnoml]{renderNomnoml()}}, \code{\link[=nomnoml_validate]{nomnoml_validate()}}, \code{\link[=nomnoml_syntax]{nomnoml_syntax()}}
 }

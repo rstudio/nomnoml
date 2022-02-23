@@ -3,7 +3,7 @@
 \name{nomnoml_syntax}
 \alias{nomnoml_syntax}
 \alias{`nomnoml-syntax`}
-\title{nomnoml_syntax}
+\title{Summary of nomnoml syntax.}
 \description{
 Summary of nomnoml syntax.
 }
