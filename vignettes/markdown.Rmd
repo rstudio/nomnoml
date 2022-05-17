@@ -74,3 +74,16 @@ And the same diagram, this time with specified size:
   [Component] <:- [ConcreteComponent]
 ]
 ```
+
+Unicode escapes (using R conventions) can be used 
+in code chunks.  
+
+```{nomnoml echo=TRUE, svg = TRUE, height = "1in"}
+[Hello]-\u03b1[World!]
+```
+
+To include backslashes in labels, specify `escape = TRUE`:
+
+```{nomnoml echo=TRUE, svg = TRUE, height = "1in", escape = TRUE}
+[Hello]-\A[World!]
+```

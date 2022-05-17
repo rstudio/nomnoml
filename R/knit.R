@@ -45,7 +45,12 @@ knit_nomnoml <- function (options) {
   knit_print <- get("knit_print", envir = asNamespace("knitr"))
   engine_output <- get("engine_output", envir = asNamespace("knitr"))
   code <- paste(options$code, collapse = "\n")
-  
+  if (isTRUE(options$escape)) 
+    usecode <- code
+  else {
+    usecode <- gsub("'", "\\\\'", code)
+    usecode <- eval(parse(text = paste0("'", usecode, "'")))
+  }
   widget_width <- options$width
   widget_height <- options$height
   fixed_image <- FALSE
@@ -70,12 +75,12 @@ knit_nomnoml <- function (options) {
   if ("reactive" %in% class(options$data)) {
     widget <- renderNomnoml({
       nomnoml(
-        code
+        usecode
       )
     })
   } else {
     widget <- nomnoml(
-      code = code,
+      code = usecode,
       width = widget_width,
       height = widget_height
     )
