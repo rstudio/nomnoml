@@ -6,7 +6,7 @@ Renders a 'nomnoml' diagram as an 'htmlwidget' or saves it
 as a '.png' or '.svg' image."><meta property="og:image" content="/logo.svg"><!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]--><!-- dependencies from examples --><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/es6shim-0.35.6/es6shim.js"></script><script src="libs/es7shim-6.0.0/es7shim.js"></script><script src="libs/graphre-0.1.3/graphre.js"></script><script src="libs/nomnoml-1.4.0/nomnoml.js"></script><script src="libs/nomnoml-binding-0.2.5/nomnoml.js"></script></head><body>
+<![endif]--><!-- dependencies from examples --><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><script src="libs/es6shim-0.35.6/es6shim.js"></script><script src="libs/es7shim-6.0.0/es7shim.js"></script><script src="libs/graphre-0.1.3/graphre.js"></script><script src="libs/nomnoml-1.5.2/nomnoml.js"></script><script src="libs/nomnoml-binding-0.2.5.9000/nomnoml.js"></script></head><body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
@@ -14,7 +14,7 @@ as a '.png' or '.svg' image."><meta property="og:image" content="/logo.svg"><!--
     
     <a class="navbar-brand me-2" href="../index.html">nomnoml</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.5</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.5.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,31 +64,42 @@ as a '.png' or '.svg' image.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">nomnoml</span><span class="op">(</span>
-  code <span class="op">=</span> <span class="st">"[Hello]-[World!]"</span>,
-  png <span class="op">=</span> <span class="cn">NULL</span>,
-  width <span class="op">=</span> <span class="cn">NULL</span>,
-  height <span class="op">=</span> <span class="cn">NULL</span>,
-  svg <span class="op">=</span> <span class="cn">FALSE</span>,
-  <span class="va">...</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">nomnoml</span><span class="op">(</span></span>
+<span>  code <span class="op">=</span> <span class="st">"[Hello]-[World!]"</span>,</span>
+<span>  png <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  width <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  height <span class="op">=</span> <span class="cn">NULL</span>,</span>
+<span>  svg <span class="op">=</span> <span class="cn">FALSE</span>,</span>
+<span>  <span class="va">...</span></span>
+<span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div class="section level2">
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
     <dl><dt>code</dt>
 <dd><p>The nomnoml diagram code.</p></dd>
+
+
 <dt>png</dt>
 <dd><p>Optional file name to export diagram as 'png'.</p></dd>
+
+
 <dt>width</dt>
 <dd><p>Optional width in pixels for the exported 'png'.</p></dd>
+
+
 <dt>height</dt>
 <dd><p>Optional height in pixels for the exported 'png'.</p></dd>
+
+
 <dt>svg</dt>
 <dd><p>Use 'svg' output instead of 'png'? Notice that rendering in
 'svg' is not at a par with 'png' and renders incorrectly at times.</p></dd>
+
+
 <dt>...</dt>
 <dd><p>Additional parameters.</p></dd>
+
 </dl></div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -118,23 +129,23 @@ directives and customer classifier styles, see <a href="nomnoml_syntax.html">nom
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Render simple diagram:</span></span>
-<span class="r-in"><span class="fu">nomnoml</span><span class="fu">::</span><span class="fu">nomnoml</span><span class="op">(</span><span class="st">"[Hello]-[World!]"</span><span class="op">)</span></span>
-<div id="htmlwidget-26aecd7940d648105149" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-26aecd7940d648105149">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[Hello]-[World!]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><span class="r-in"></span>
-<span class="r-in"><span class="co"># Render complex diagram:</span></span>
-<span class="r-in"><span class="fu">nomnoml</span><span class="fu">::</span><span class="fu">nomnoml</span><span class="op">(</span><span class="st">"</span>
-<span class="r-in">  #stroke: #a86128</span>
-<span class="r-in">  [&lt;frame&gt;Decorator pattern|</span>
-<span class="r-in">    [&lt;abstract&gt;Component||+ operation()]</span>
-<span class="r-in">    [Client] depends --&gt; [Component]</span>
-<span class="r-in">    [Decorator|- next: Component]</span>
-<span class="r-in">    [Decorator] decorates -- [ConcreteComponent]</span>
-<span class="r-in">    [Component] &lt;:- [Decorator]</span>
-<span class="r-in">    [Component] &lt;:- [ConcreteComponent]</span>
-<span class="r-in">  ]"</span><span class="op">)</span></span>
-<div id="htmlwidget-86b853a4fc55b5c5dddf" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
-<script type="application/json" data-for="htmlwidget-86b853a4fc55b5c5dddf">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n  #stroke: #a86128\n  [<frame>Decorator pattern|\n    [<abstract>Component||+ operation()]\n    [Client] depends --> [Component]\n    [Decorator|- next: Component]\n    [Decorator] decorates -- [ConcreteComponent]\n    [Component] <:- [Decorator]\n    [Component] <:- [ConcreteComponent]\n  ]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><span class="r-in"></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># Render simple diagram:</span></span></span>
+<span class="r-in"><span><span class="fu">nomnoml</span><span class="fu">::</span><span class="fu">nomnoml</span><span class="op">(</span><span class="st">"[Hello]-[World!]"</span><span class="op">)</span></span></span>
+<div id="htmlwidget-c47fdbc8417f55662238" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c47fdbc8417f55662238">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[Hello]-[World!]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># Render complex diagram:</span></span></span>
+<span class="r-in"><span><span class="fu">nomnoml</span><span class="fu">::</span><span class="fu">nomnoml</span><span class="op">(</span><span class="st">"</span></span></span>
+<span class="r-in"><span><span class="st">  #stroke: #a86128</span></span></span>
+<span class="r-in"><span><span class="st">  [&lt;frame&gt;Decorator pattern|</span></span></span>
+<span class="r-in"><span><span class="st">    [&lt;abstract&gt;Component||+ operation()]</span></span></span>
+<span class="r-in"><span><span class="st">    [Client] depends --&gt; [Component]</span></span></span>
+<span class="r-in"><span><span class="st">    [Decorator|- next: Component]</span></span></span>
+<span class="r-in"><span><span class="st">    [Decorator] decorates -- [ConcreteComponent]</span></span></span>
+<span class="r-in"><span><span class="st">    [Component] &lt;:- [Decorator]</span></span></span>
+<span class="r-in"><span><span class="st">    [Component] &lt;:- [ConcreteComponent]</span></span></span>
+<span class="r-in"><span><span class="st">  ]"</span><span class="op">)</span></span></span>
+<div id="htmlwidget-8bae0a1a892c0904099e" style="width:700px;height:432.632880098888px;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8bae0a1a892c0904099e">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n  #stroke: #a86128\n  [<frame>Decorator pattern|\n    [<abstract>Component||+ operation()]\n    [Client] depends --> [Component]\n    [Decorator|- next: Component]\n    [Decorator] decorates -- [ConcreteComponent]\n    [Component] <:- [Decorator]\n    [Component] <:- [ConcreteComponent]\n  ]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
@@ -146,7 +157,7 @@ directives and customer classifier styles, see <a href="nomnoml_syntax.html">nom
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.5.</p>
 </div>
 
     </footer></div>
