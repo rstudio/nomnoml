@@ -18,12 +18,23 @@ resize_image_if_needed <- function(image, max_width, max_height) {
   
   if (max_ratio > 1 && ratio < 1 || max_ratio < 1 && ratio > 1) {
     tar_height <- ratio * max_width
-    graphics::rasterImage(original, usr[1], usr[3]  + (max_height - tar_height) / 2, usr[2], usr[4] - (max_height - tar_height) / 2)
+    graphics::rasterImage(
+      original, 
+      usr[1], 
+      usr[3] + (max_height - tar_height) / 2, 
+      usr[2], 
+      usr[4] - (max_height - tar_height) / 2
+    )
     grDevices::dev.off()
   }
   else {
     tar_width <- ratio * max_height
-    graphics::rasterImage(original, usr[1] + (max_width - tar_width) / 2, usr[3], usr[2] - (max_width - tar_width) / 2, usr[4])
+    graphics::rasterImage(
+      original, 
+      usr[1] + (max_width - tar_width) / 2, 
+      usr[3], 
+      usr[2] - (max_width - tar_width) / 2, usr[4]
+    )
     grDevices::dev.off()
   }
   
@@ -72,55 +83,45 @@ knit_nomnoml <- function (options) {
   
   code_output <- structure(list(src = code), class = 'source')
   
-  if (is_rstudio) {
-    widget
-  }
-  else if (fixed_image) {
+  if (is_rstudio) { return(widget) }
+  
+  if (fixed_image) {
     stop_if_no_phantomjs()
     file <- tempfile(fileext = ".html")
     png <- tempfile(fileext = ".png")
     
     htmlwidgets::saveWidget(widget, file)
-    webshot::webshot(file, png, selector = "canvas")
+    webshot::webshot(url = normalizePath(file, winslash = "/"), file = png, selector = "canvas")
     
     png <- resize_image_if_needed(png, widget_width, widget_height)
     
     res = readBin(png, "raw", file.info(png)[, "size"])
-    image_output <- structure(list(image = res, extension = ".png"), class = "html_screenshot")
+    image_output <- structure(
+      list(image = res, extension = ".png"), 
+      class = "html_screenshot"
+    )
     
     if (identical(options$echo, FALSE)) {
-      render_output <- list(
-        image_output
-      )
-    }
-    else {
-      render_output <- list(
-        code_output,
-        image_output
-      )
+      render_output <- list(image_output)
+    } else {
+      render_output <- list(code_output, image_output)
     }
     
-    engine_output(
-      options, out = render_output
+    return(
+      engine_output(options, out = render_output)
     )
   }
-  else {
-    widget_output <- knit_print(widget, options = options)
-    
-    if (identical(options$echo, FALSE)) {
-      render_output <- list(
-        widget_output
-      )
-    }
-    else {
-      render_output <- list(
-        code_output,
-        widget_output
-      )
-    }
-    
-    engine_output(
-      options, out = render_output
-    )
+  
+  # not fixed image:
+  
+  widget_output <- knit_print(widget, options = options)
+  
+  if (identical(options$echo, FALSE)) {
+    render_output <- list(widget_output)
+  } else {
+    render_output <- list(code_output, widget_output)
   }
+  
+  engine_output(options, out = render_output)
+  
 }
