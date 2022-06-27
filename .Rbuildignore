@@ -3,8 +3,6 @@
 ^docs$
 ^README.Rmd$
 ^scripts$
-^appveyor\.yml$
-^\.travis\.yml$
 ^_pkgdown\.yml$
 ^pkgdown$
 ^\.github$
