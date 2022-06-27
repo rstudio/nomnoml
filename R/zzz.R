@@ -4,7 +4,6 @@
     knit_engines <- get("knit_engines", envir = asNamespace("knitr"))
     knit_engines$set(nomnoml = knit_nomnoml)
   }
-  rlang::inform(packageStartupMessage("This should be suppressable"))
   if (!webshot::is_phantomjs_installed()) {
     rlang::inform(
       packageStartupMessage(
