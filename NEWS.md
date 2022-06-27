@@ -1,3 +1,5 @@
+# nomnoml (development version)
+
 # nomnoml 0.2.5
 
 - Correctly use `packageStartupMessage()`
