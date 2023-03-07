@@ -1,0 +1,31 @@
+---
+title: "Using 'nomnoml' in 'xaringan'"
+author: "Andrie de Vries"
+date: '`r format(Sys.Date(), format = "%d %B %Y")`'
+output:
+  xaringan::moon_reader:
+  lib_dir: lib
+seal: true
+nature:
+  ratio: "16:9"
+---
+
+## Using a nomnoml chunk
+
+```{r}
+library(nomnoml)
+```
+
+
+  
+```{nomnoml, svg=TRUE}
+[Hello]-[World]
+```
+
+---
+
+## Using an R chunk
+
+```{r}
+nomnoml::nomnoml("[Hello]-[World]", svg = TRUE)
+```

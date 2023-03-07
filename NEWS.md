@@ -1,6 +1,6 @@
 # nomnoml (development version)
 
-- Update `nomnoml.js` to v1.5.2
+- Update `nomnoml.js` to v1.5.3
 - Fix spurious package startup message
 
 # nomnoml 0.2.5

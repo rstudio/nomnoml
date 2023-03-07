@@ -21,7 +21,7 @@ Imports:
     webshot,
     lifecycle,
     rlang
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.2
 Suggests:
     V8,
     knitr,
