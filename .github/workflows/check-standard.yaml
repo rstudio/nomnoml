@@ -41,7 +41,7 @@ jobs:
           http-user-agent: ${{ matrix.config.http-user-agent }}
           use-public-rspm: true
 
-      - uses: r-lib/actions/setup-r-dependencies@v1
+      - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: rcmdcheck
 
@@ -50,4 +50,4 @@ jobs:
           webshot::install_phantomjs()
         shell: Rscript {0}
         
-      - uses: r-lib/actions/check-r-package@v1
+      - uses: r-lib/actions/check-r-package@v2
