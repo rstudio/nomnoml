@@ -20,3 +20,15 @@ library(nomnoml)
 ```{nomnoml two, width="250px", height="75px", echo=FALSE, svg = TRUE}
 [Hello]-[World!]
 ```
+
+Add Greek alpha as label:
+
+```{nomnoml three, width="250px", height="75px", echo=FALSE, svg = TRUE}
+[Hello]-\u03b1[World!]
+```
+
+Show the backslash:
+
+```{nomnoml four, width="250px", height="75px", echo=FALSE, svg = TRUE, escape = TRUE}
+[Hello]-\A[World!]
+```
