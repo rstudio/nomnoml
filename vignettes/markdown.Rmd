@@ -75,15 +75,44 @@ And the same diagram, this time with specified size:
 ]
 ```
 
-Unicode escapes (using R conventions) can be used 
-in code chunks.  
 
-```{nomnoml echo=TRUE, svg = TRUE, height = "1in"}
-[Hello]-\u03b1[World!]
+## Unicode chunks
+
+Unicode escapes (using R conventions) can be used in code chunks.
+
+In the next example, the unicode character `\u03b1` displays as greek alpha (`r "\u03B1"`).
+
+```` markdown
+`r ''````{nomnoml, escape = TRUE}
+[Hello]-\u03B1[Unicode!]
+```
+````
+
+```{nomnoml echo=FALSE, svg = TRUE, height = "1in"}
+[Hello]-\u03B1[Unicode!]
+```
+
+Of course, you can use the unicode character directly
+
+```` markdown
+`r ''````{nomnoml, escape = TRUE}
+[Hello]-α[Unicode!]
+```
+````
+
+```{nomnoml echo=FALSE, svg = TRUE, height = "1in"}
+[Hello]-α[Unicode!]
 ```
 
 To include backslashes in labels, specify `escape = TRUE`:
 
-```{nomnoml echo=TRUE, svg = TRUE, height = "1in", escape = TRUE}
-[Hello]-\A[World!]
+```` markdown
+`r ''````{nomnoml, escape = TRUE}
+[Hello]-\A[Escape character!]
+```
+````
+
+
+```{nomnoml echo=FALSE, svg = TRUE, height = "1in", escape = TRUE}
+[Hello]-\A[Escape character!]
 ```

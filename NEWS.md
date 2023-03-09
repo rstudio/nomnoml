@@ -6,6 +6,7 @@
 
 - Update `nomnoml.js` to v1.5.3
 - Fix spurious package startup message
+- Merge PR by @dmurdoch to add unicode support
 
 # nomnoml 0.2.5
 
