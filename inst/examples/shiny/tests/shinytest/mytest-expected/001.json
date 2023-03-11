@@ -6,7 +6,8 @@
     "diagram_canvas": {
       "x": {
         "code": "\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[hello]->[world]",
-        "svg": false
+        "svg": false,
+        "png": null
       },
       "evals": [
 
@@ -21,7 +22,8 @@
     "diagram_svg": {
       "x": {
         "code": "\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n[hello]->[world]",
-        "svg": true
+        "svg": true,
+        "png": null
       },
       "evals": [
 
