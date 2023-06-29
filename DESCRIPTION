@@ -1,7 +1,7 @@
 Package: nomnoml
 Type: Package
 Title: Sassy 'UML' Diagrams
-Version: 0.2.6.9000
+Version: 0.2.7
 Authors@R: c(
     person("Andrie", "de Vries", email = "apdevries@gmail.com", role = c("aut", "cre")),
     person("Javier", "Luraschi", email = "jluraschi@gmail.com", role = "aut"),
@@ -9,7 +9,7 @@ Authors@R: c(
            comment = "nomnoml.js library, <https://nomnoml.com>"),
     person(family = "RStudio", role = c("cph", "fnd"))
     )
-Description: A tool for drawing sassy 'UML' (Unified Modelling Language) diagrams 
+Description: A tool for drawing sassy 'UML' (Unified Modeling Language) diagrams 
   based on a simple syntax, see <https://www.nomnoml.com>. Supports styling, 
   R Markdown and exporting diagrams in the PNG format.
 License: MIT + file LICENSE

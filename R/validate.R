@@ -17,6 +17,7 @@
 #' @return Either TRUE or FALSE
 #' @export
 #' @seealso [nomnoml()]
+#' @importFrom utils compareVersion
 #'
 #' @examples
 #' \dontrun{
@@ -32,7 +33,7 @@ nomnoml_validate <- function(diagram = "[test]") {
   v8_version <- V8::engine_info()$version
   
   # it's not clear where exactly the break happens, but my local install of
-  # windows has v8 version 6, and the linux server has V8 version 8
+  # windows has V8 version 6, and the linux server has V8 version 8
   
   if (compareVersion(v8_version, "7.0")) {
     ct$source(system.file("htmlwidgets/lib-raw/graphre.js", package = "nomnoml", mustWork = TRUE))
