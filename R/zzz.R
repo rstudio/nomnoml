@@ -8,7 +8,7 @@
     rlang::inform(
       message = paste(
         "If you want to use the extended capability of `nomnoml` to capture png ",
-        "images in R markdown, please install PhantomJS using webshot::install_phantomjs()"
+        "images in R markdown, please install PhantomJS using `webshot::install_phantomjs()`"
       ),
       class = "packageStartupMessage",
       .frequency = "once",
