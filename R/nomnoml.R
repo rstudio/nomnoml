@@ -1,8 +1,3 @@
-stop_if_no_phantomjs <- function() {
-  if (!webshot::is_phantomjs_installed()) {
-    stop("You must install phantomjs using webshot::install_phantomjs()")
-  }
-}
 
 #' Create and render a nomnoml diagram.
 #'
@@ -102,7 +97,6 @@ nomnoml <- function(
   
   if (!is.null(png)) {
     if (svg) stop("Parameter 'svg' must be false when creating PNGs.")
-    stop_if_no_phantomjs()
     widget
   }
   else {

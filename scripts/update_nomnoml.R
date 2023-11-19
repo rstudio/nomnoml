@@ -27,7 +27,7 @@ message("Updating to nomnoml version: ", nomnoml_version)
 
 writeLines(
   nomnoml_js,
-  file.path("inst", "htmlwidgets", "lib", "nomnoml.js")
+  file.path("inst", "htmlwidgets", "lib", "nomnoml", "nomnoml.js")
 )
 
 config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")
@@ -54,7 +54,7 @@ message("Updating to graphre version: ", graphre_version)
 
 writeLines(
   graphre_js,
-  file.path("inst", "htmlwidgets", "lib", "graphre.js")
+  file.path("inst", "htmlwidgets", "lib", "graphre", "graphre.js")
 )
 
 config_file <- file.path("inst", "htmlwidgets", "nomnoml.yaml")

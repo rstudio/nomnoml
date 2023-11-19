@@ -1,4 +1,8 @@
-# nomnoml (development version)
+# nomnoml 0.2.8
+
+- Update `nomnoml.js` to v1.6.2
+- Update from `webshot` to `webshot2`, thus removing the dependency on `phantomjs`
+
 
 
 # nomnoml 0.2.7

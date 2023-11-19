@@ -8,7 +8,6 @@ test_that("shiny", {
   skip_on_cran()
   skip_on_ci() # These test are unreliable from version to version
   skip_on_os("windows")
-  testthat::skip_if_not(webshot::is_phantomjs_installed())
   
   # Only run the tests for code coverage on Github Actions
   

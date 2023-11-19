@@ -116,3 +116,15 @@ To include backslashes in labels, specify `escape = TRUE`:
 ```{nomnoml echo=FALSE, svg = TRUE, height = "1in", escape = TRUE}
 [Hello]-\A[Escape character!]
 ```
+
+
+## Complex chunks
+
+During 2012 the `nomnoml.js` library added support for multiple nodes in a single expression.
+
+This means it's possible to create diagrams like this:
+
+```{nomnoml svg = TRUE}
+#direction: right
+[<start>start] -> [process] -> [<end>end]
+```

@@ -3,10 +3,12 @@ title: "Test nomnoml"
 output: 
   html_document:
     self_contained: FALSE
+    clean: FALSE
+    quiet: TRUE
+    run_pandoc: FALSE
 ---
 
 ```{r setup}
-# knitr::opts_chunk$set(dev = "png")
 library(nomnoml)
 ```
 

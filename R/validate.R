@@ -35,7 +35,7 @@ nomnoml_validate <- function(diagram = "[test]") {
   # it's not clear where exactly the break happens, but my local install of
   # windows has V8 version 6, and the linux server has V8 version 8
   
-  if (compareVersion(v8_version, "7.0")) {
+  if (compareVersion(v8_version, "7.0") < 0) {
     ct$source(system.file("htmlwidgets/lib-raw/graphre.js", package = "nomnoml", mustWork = TRUE))
     ct$source(system.file("htmlwidgets/lib-raw/nomnoml.js", package = "nomnoml", mustWork = TRUE))
   } else {

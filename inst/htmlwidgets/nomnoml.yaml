@@ -12,6 +12,6 @@ dependencies:
   src: htmlwidgets/lib/graphre
   script: graphre.js
 - name: nomnoml
-  version: 1.5.3
+  version: 1.6.2
   src: htmlwidgets/lib/nomnoml
   script: nomnoml.js

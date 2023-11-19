@@ -91,14 +91,17 @@ knit_nomnoml <- function (options) {
   if (is_rstudio) { return(widget) }
   
   if (fixed_image) {
-    stop_if_no_phantomjs()
-    file <- tempfile(fileext = ".html")
-    png <- tempfile(fileext = ".png")
+    file_name <- tempfile("widget_", fileext = ".html")
+    png_name <- tempfile(fileext = ".png")
+    url_name <- normalizePath(file_name, winslash = "/", mustWork = FALSE)
+    png_name <- normalizePath(png_name, winslash = "/", mustWork = FALSE)
     
-    htmlwidgets::saveWidget(widget, file)
-    webshot::webshot(url = normalizePath(file, winslash = "/"), file = png, selector = "canvas")
+    htmlwidgets::saveWidget(widget, file_name, selfcontained = FALSE)
+    webshot2::webshot(url = url_name,  file = png_name, 
+                      selector = "canvas", 
+                      quiet = TRUE)
     
-    png <- resize_image_if_needed(png, widget_width, widget_height)
+    png <- resize_image_if_needed(png_name, widget_width, widget_height)
     
     res = readBin(png, "raw", file.info(png)[, "size"])
     image_output <- structure(
