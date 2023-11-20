@@ -35,8 +35,7 @@ library(nomnoml)
 #stroke: orange
 #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
+[A]-[B]-[<box>C]
 ```
 ````
 

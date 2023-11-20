@@ -1,7 +1,7 @@
 Package: nomnoml
 Type: Package
 Title: Sassy 'UML' Diagrams
-Version: 0.2.8
+Version: 0.3.0
 Authors@R: c(
     person("Andrie", "de Vries", email = "apdevries@gmail.com", role = c("aut", "cre")),
     person("Javier", "Luraschi", email = "jluraschi@gmail.com", role = "aut"),
@@ -11,7 +11,8 @@ Authors@R: c(
     )
 Description: A tool for drawing sassy 'UML' (Unified Modeling Language) diagrams 
   based on a simple syntax, see <https://www.nomnoml.com>. Supports styling, 
-  R Markdown and exporting diagrams in the PNG format.
+  R Markdown and exporting diagrams in the PNG format. Note: you need a chromium based 
+  browser installed on your system.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Depends:
@@ -31,8 +32,8 @@ Suggests:
     shinytest,
     covr,
     spelling
-SystemRequirements: PhantomJS (http://phantomjs.org) for taking screenshots
-URL: https://github.com/rstudio/nomnoml
+SystemRequirements: A chromium based browser, required by "webshot2" <https://rstudio.github.io/webshot2/>
+URL: https://rstudio.github.io/nomnoml/
 BugReports: https://github.com/rstudio/nomnoml/issues
 Roxygen: list(markdown = TRUE)
 RdMacros: lifecycle

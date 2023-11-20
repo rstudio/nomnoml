@@ -38,6 +38,11 @@ install.packages("remotes")
 remotes::install_github("rstudio/nomnoml")
 ```
 
+**You need a chromium based browser installed on your system**
+
+In previous releases of `nomnoml` (prior to v0.3.0) we used the `phantom.js` headless browser to capture screenshots.  In version 0.3.0 we switched to using `webshot2`.
+
+This means you need a chromium-based browser, e.g. Chromium itself, Chrome, Edge, Vivaldi, Brave, or Opera.
 
 ## Getting Started
 
@@ -75,8 +80,7 @@ library(nomnoml)
 #stroke: orange
 #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
+[A]-[B]-[<box>C]
 ```
 ````
 
@@ -84,8 +88,7 @@ library(nomnoml)
 #stroke: orange
 #.highlight: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<highlight>C]
+[A]-[B]-[<highlight>C]
 ```
 
 ### SVG
@@ -106,8 +109,7 @@ To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk options
 #stroke: orange
 #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
+[A]-[B]-[<box>C]
 ```
 ````
 
@@ -116,8 +118,7 @@ To render a `nomnoml` chunk in R Markdown, add `svg=TRUE` to the chunk options
 #stroke: orange
 #.highlight: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<highlight>C]
+[A]-[B]-[<highlight>C]
 ```
 
 
@@ -128,7 +129,7 @@ Notice that much more complex diagrams can be designed using `nomnoml` by
 combining association types, classifier types, directives and custom 
 classifier styles.
 
-```{nomnoml nomnoml-decorator, width="250px", height="250px"}
+```{nomnoml nomnoml-decorator, width="250px", height="250px", svg=TRUE}
 #stroke: #a86128
 #direction: down
 [<frame>Decorator pattern|
@@ -140,6 +141,9 @@ classifier styles.
   [Component] <:- [ConcreteComponent]
 ]
 ```
+
+
+## Nomnoml documentation
 
 ### Association types
 

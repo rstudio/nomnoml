@@ -35,8 +35,7 @@ library(nomnoml)
 #stroke: orange
 #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
+[A]-[B]-[<box>C]
 ```
 ````
 
@@ -118,9 +117,9 @@ To include backslashes in labels, specify `escape = TRUE`:
 ```
 
 
-## Complex chunks
+## Multiple nodes per line
 
-During 2012 the `nomnoml.js` library added support for multiple nodes in a single expression.
+During 2023 the `nomnoml.js` library added support for multiple nodes in a single line.  The R package incorporates these changes since version 0.3.0.
 
 This means it's possible to create diagrams like this:
 

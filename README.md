@@ -31,6 +31,15 @@ install.packages("remotes")
 remotes::install_github("rstudio/nomnoml")
 ```
 
+**You need a chromium based browser installed on your system**
+
+In previous releases of `nomnoml` (prior to v0.3.0) we used the
+`phantom.js` headless browser to capture screenshots. In version 0.3.0
+we switched to using `webshot2`.
+
+This means you need a chromium-based browser, e.g. Chromium itself,
+Chrome, Edge, Vivaldi, Brave, or Opera.
+
 ## Getting Started
 
 You can create your first diagram by running:
@@ -68,8 +77,7 @@ library(nomnoml)
 #stroke: orange
 #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
+[A]-[B]-[<box>C]
 ```
 ````
 
@@ -91,8 +99,7 @@ options
 #stroke: orange
 #.box: fill=#8f8 dashed visual=ellipse
 
-[A]-[B]
-[B]-[<box>C]
+[A]-[B]-[<box>C]
 ```
 ````
 
@@ -118,6 +125,8 @@ classifier styles.
 ```
 
 ![](man/figures/readme/nomnoml-decorator-2.png)<!-- -->
+
+## Nomnoml documentation
 
 ### Association types
 
