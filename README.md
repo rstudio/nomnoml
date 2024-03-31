@@ -1,11 +1,14 @@
 
+
 # nomnoml <img src='man/figures/logo.png' align="right" height="139" />
 
 <!-- badges: start -->
 
+[![CRAN
+status](https://www.r-pkg.org/badges/version/nomnoml)](https://CRAN.R-project.org/package=nomnoml)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/nomnoml)](https://www.r-pkg.org/pkg/nomnoml)
 [![R-CMD-check](https://github.com/rstudio/nomnoml/workflows/R-CMD-check/badge.svg)](https://github.com/rstudio/nomnoml/actions)
-[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/nomnoml)](https://cran.r-project.org/package=nomnoml)
-<a href="https://www.r-pkg.org/pkg/nomnoml"><img src="https://cranlogs.r-pkg.org/badges/nomnoml?color=brightgreen" style=""></a>
 [![Codecov test
 coverage](https://codecov.io/gh/rstudio/nomnoml/branch/main/graph/badge.svg)](https://app.codecov.io/gh/rstudio/nomnoml?branch=main)
 [![Lifecycle:
@@ -48,7 +51,7 @@ You can create your first diagram by running:
 nomnoml::nomnoml("[Hello]-[World!]")
 ```
 
-![](man/figures/readme/nomnoml-simple-1.png)<!-- -->
+![](man/figures/readme/nomnoml-simple-1.png)
 
 To make the diagram flow vertically, the default at
 [nomnoml.com](https://www.nomnoml.com/), add the
@@ -59,7 +62,7 @@ To make the diagram flow vertically, the default at
 [Hello]-[World!]
 ```
 
-![](man/figures/readme/nomnoml-vertical-2.png)<!-- -->
+![](man/figures/readme/nomnoml-vertical-2.png)
 
 You can also use `nomnoml` in R Markdown:
 
@@ -81,7 +84,7 @@ library(nomnoml)
 ```
 ````
 
-![](man/figures/readme/nomnoml-multiline-3.png)<!-- -->
+![](man/figures/readme/nomnoml-multiline-3.png)
 
 ### SVG
 
@@ -103,7 +106,7 @@ options
 ```
 ````
 
-![](man/figures/readme/nomnoml-svg-1.png)<!-- -->
+![](man/figures/readme/nomnoml-svg-1.png)
 
 ### Advanced
 
@@ -124,7 +127,7 @@ classifier styles.
 ]
 ```
 
-![](man/figures/readme/nomnoml-decorator-2.png)<!-- -->
+![](man/figures/readme/nomnoml-decorator-2.png)
 
 ## Nomnoml documentation
 
