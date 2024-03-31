@@ -14,8 +14,8 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Using nomnoml with pdf documents">
 <meta property="og:description" content="nomnoml">
@@ -76,7 +76,8 @@
 
 
 
-<script src="pdf_files/htmlwidgets-1.6.2/htmlwidgets.js"></script><script src="pdf_files/es6shim-0.35.6/es6shim.js"></script><script src="pdf_files/es7shim-6.0.0/es7shim.js"></script><script src="pdf_files/graphre-0.1.3/graphre.js"></script><script src="pdf_files/nomnoml-1.6.2/nomnoml.js"></script><script src="pdf_files/nomnoml-binding-0.3.0/nomnoml.js"></script><div class="row">
+<link href="pdf_files/htmltools-fill-0.5.8/fill.css" rel="stylesheet">
+<script src="pdf_files/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="pdf_files/es6shim-0.35.6/es6shim.js"></script><script src="pdf_files/es7shim-6.0.0/es7shim.js"></script><script src="pdf_files/graphre-0.1.3/graphre.js"></script><script src="pdf_files/nomnoml-1.6.2/nomnoml.js"></script><script src="pdf_files/nomnoml-binding-0.3.0/nomnoml.js"></script><div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.svg" class="logo" alt=""><h1>Using nomnoml with pdf documents</h1>
             
@@ -93,21 +94,21 @@
 output. Here is an example R Markdown, including the yaml header. Notice
 that you can use <a href="https://rstudio.github.io/nomnoml/" class="external-link">nomnoml</a> chunks and these will be
 rendered by the <code>nomnoml</code> engine.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "A Diagram"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="in">```{r, setup, include=FALSE}</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="in">library(nomnoml)</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="in">```{nomnoml}</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="in">#stroke: orange</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="in">#.box: fill=#8f8 dashed visual=ellipse</span></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="in">[A]-[B]-[&lt;box&gt;C]</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="an">title:</span><span class="co"> "A Diagram"</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="an">output:</span><span class="co"> html_document</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="in">```{r, setup, include=FALSE}</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="in">library(nomnoml)</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="in">```{nomnoml}</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="in">#stroke: orange</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="in">#.box: fill=#8f8 dashed visual=ellipse</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="in">[A]-[B]-[&lt;box&gt;C]</span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="in">```</span></span></code></pre></div>
 <div class="section level2">
 <h2 id="chunk-examples">Chunk examples<a class="anchor" aria-label="anchor" href="#chunk-examples"></a>
 </h2>
@@ -123,8 +124,8 @@ size:</p>
   [Component] &lt;:- [Decorator]
   [Component] &lt;:- [ConcreteComponent]
 ]</code></pre>
-<div class="nomnoml html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-306623d5c8f10daefe4d" style="width:700px;height:432.632880098888px;"></div>
-<script type="application/json" data-for="htmlwidget-306623d5c8f10daefe4d">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><p>And the same diagram, this time with specified size:</p>
+<div class="nomnoml html-widget html-fill-item" id="htmlwidget-986a38e69061cca3a03c" style="width:700px;height:432.632880098888px;"></div>
+<script type="application/json" data-for="htmlwidget-986a38e69061cca3a03c">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script><p>And the same diagram, this time with specified size:</p>
 <pre class="nomnoml"><code>#stroke: #a86128
 #direction: down
 [&lt;frame&gt;Decorator pattern|
@@ -135,8 +136,8 @@ size:</p>
   [Component] &lt;:- [Decorator]
   [Component] &lt;:- [ConcreteComponent]
 ]</code></pre>
-<div id="htmlwidget-e24af5f8a2ed0d7ab8e8" style="width:2in;height:2in;" class="nomnoml html-widget "></div>
-<script type="application/json" data-for="htmlwidget-e24af5f8a2ed0d7ab8e8">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6c45051f657a044f9bb1" style="width:2in;height:2in;" class="nomnoml html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6c45051f657a044f9bb1">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n#stroke: #a86128\n#direction: down\n[<frame>Decorator pattern|\n  [<abstract>Component||+ operation()]\n  [Client] depends --> [Component]\n  [Decorator|- next: Component]\n  [Decorator] decorates -- [ConcreteComponent]\n  [Component] <:- [Decorator]\n  [Component] <:- [ConcreteComponent]\n]","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
 </div>
   </main>
 </div>

@@ -1,8 +1,8 @@
-pandoc: 2.19.2
+pandoc: 3.1.11
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   markdown: markdown.html
   pdf: pdf.html
-last_built: 2023-11-20T10:16Z
+last_built: 2024-03-31T17:40Z
 
