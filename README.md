@@ -13,6 +13,7 @@ downloads](https://cranlogs.r-pkg.org/badges/nomnoml)](https://www.r-pkg.org/pkg
 coverage](https://codecov.io/gh/rstudio/nomnoml/branch/main/graph/badge.svg)](https://app.codecov.io/gh/rstudio/nomnoml?branch=main)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html)
+[![R-CMD-check](https://github.com/rstudio/nomnoml/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/rstudio/nomnoml/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 **nomnoml** provides an R interface to
