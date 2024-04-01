@@ -44,12 +44,6 @@ jobs:
           extra-packages: any::rcmdcheck
           needs: check
 
-      - name: Install dependencies
-        run: |
-          webshot::install_phantomjs()
-        shell: Rscript {0}
-
-
       - uses: r-lib/actions/check-r-package@v2
         with:
           upload-snapshots: true
