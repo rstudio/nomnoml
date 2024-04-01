@@ -1,6 +1,3 @@
-# longer delay to wait until chrome starts on GHA
-# https://github.com/rstudio/chromote/issues/114#issuecomment-1675406196
-options(chromote.timeout = 60)
 
 test_that("knitting works", {
   skip_on_cran()
