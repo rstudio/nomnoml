@@ -103,7 +103,7 @@ knit_nomnoml <- function (options) {
     
     png <- resize_image_if_needed(png_name, widget_width, widget_height)
     
-    res = readBin(png, "raw", file.info(png)[, "size"])
+    res <- readBin(png, "raw", file.info(png)[, "size"])
     image_output <- structure(
       list(image = res, extension = ".png"), 
       class = "html_screenshot"
