@@ -1,42 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/articles/markdown.html</loc>
-  </url>
-  <url>
-    <loc>/articles/pdf.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nomnoml-shiny.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nomnoml.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nomnoml_syntax.html</loc>
-  </url>
-  <url>
-    <loc>/reference/nomnoml_validate.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/markdown.html</loc></url>
+<url><loc>/articles/pdf.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/nomnoml-shiny.html</loc></url>
+<url><loc>/reference/nomnoml.html</loc></url>
+<url><loc>/reference/nomnoml_syntax.html</loc></url>
+<url><loc>/reference/nomnoml_validate.html</loc></url>
 </urlset>
+
